@@ -10,14 +10,20 @@ export function useRecommendations() {
     let score = 50
     const userStyle = userStore.stylePreference
     const userContexts = userStore.contexts
+    const userShoeFeatures = userStore.shoeFeatures
 
     if (userStyle && product.style.includes(userStyle)) {
-      score += 25
+      score += 20
     }
 
     if (userContexts.length > 0) {
       const contextMatches = product.context.filter(c => userContexts.includes(c)).length
-      score += Math.min(25, contextMatches * 15)
+      score += Math.min(15, contextMatches * 10)
+    }
+
+    if (userShoeFeatures.length > 0 && product.shoeFeatures) {
+      const featureMatches = product.shoeFeatures.filter(f => userShoeFeatures.includes(f)).length
+      score += Math.min(15, featureMatches * 5)
     }
 
     const jitter = ((product.id.charCodeAt(0) + product.id.charCodeAt(1)) % 11) - 5

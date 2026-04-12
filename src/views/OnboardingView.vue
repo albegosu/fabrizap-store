@@ -5,6 +5,7 @@ import { useUserStore } from '@/stores/userStore'
 import ProgressBar from '@/components/onboarding/ProgressBar.vue'
 import StyleSelector from '@/components/onboarding/StyleSelector.vue'
 import ContextChips from '@/components/onboarding/ContextChips.vue'
+import ShoeFeatureChips from '@/components/onboarding/ShoeFeatureChips.vue'
 
 const router = useRouter()
 const userStore = useUserStore()
@@ -12,6 +13,7 @@ const userStore = useUserStore()
 const step = ref(1)
 const selectedStyle = ref(userStore.stylePreference || '')
 const selectedContexts = ref([...userStore.contexts])
+const selectedShoeFeatures = ref([...userStore.shoeFeatures])
 
 function nextStep() {
   if (step.value < 3) {
@@ -28,6 +30,7 @@ function prevStep() {
 function finish() {
   userStore.setStylePreference(selectedStyle.value)
   userStore.setContexts(selectedContexts.value)
+  userStore.setShoeFeatures(selectedShoeFeatures.value)
   userStore.completeOnboarding()
   router.push('/')
 }
@@ -114,9 +117,10 @@ function skip() {
             </p>
           </div>
 
-          <div class="space-y-8 flex-1">
+          <div class="space-y-8 flex-1 overflow-y-auto">
             <StyleSelector v-model="selectedStyle" />
             <ContextChips v-model="selectedContexts" />
+            <ShoeFeatureChips v-model="selectedShoeFeatures" />
           </div>
 
           <div class="mt-auto pt-8 flex items-center gap-4">
@@ -166,6 +170,15 @@ function skip() {
                   class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-label text-xs font-semibold"
                 >
                   {{ ctx.charAt(0).toUpperCase() + ctx.slice(1) }}
+                </span>
+              </div>
+              <div v-if="selectedShoeFeatures.length" class="flex flex-wrap justify-center gap-2 mt-3">
+                <span
+                  v-for="feat in selectedShoeFeatures"
+                  :key="feat"
+                  class="px-4 py-2 rounded-full bg-primary/10 text-primary font-label text-xs font-semibold"
+                >
+                  {{ feat.charAt(0).toUpperCase() + feat.slice(1).replace('-', ' ') }}
                 </span>
               </div>
             </div>

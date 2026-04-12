@@ -14,18 +14,22 @@ const wardrobeStore = useWardrobeStore()
 const editingPreferences = ref(false)
 const editStyle = ref(userStore.stylePreference || '')
 const editContexts = ref([...userStore.contexts])
+const editShoeFeatures = ref([...userStore.shoeFeatures])
 
 const styles = categories.styles
 const contexts = categories.contexts
+const shoeFeatures = categories.shoeFeatures
 
 function toggleEditPreferences() {
   if (editingPreferences.value) {
     userStore.setStylePreference(editStyle.value)
     userStore.setContexts(editContexts.value)
+    userStore.setShoeFeatures(editShoeFeatures.value)
     editingPreferences.value = false
   } else {
     editStyle.value = userStore.stylePreference || ''
     editContexts.value = [...userStore.contexts]
+    editShoeFeatures.value = [...userStore.shoeFeatures]
     editingPreferences.value = true
   }
 }
@@ -33,6 +37,7 @@ function toggleEditPreferences() {
 function cancelEdit() {
   editStyle.value = userStore.stylePreference || ''
   editContexts.value = [...userStore.contexts]
+  editShoeFeatures.value = [...userStore.shoeFeatures]
   editingPreferences.value = false
 }
 
@@ -42,6 +47,15 @@ function toggleContext(id) {
     editContexts.value.splice(idx, 1)
   } else {
     editContexts.value.push(id)
+  }
+}
+
+function toggleShoeFeature(id) {
+  const idx = editShoeFeatures.value.indexOf(id)
+  if (idx >= 0) {
+    editShoeFeatures.value.splice(idx, 1)
+  } else {
+    editShoeFeatures.value.push(id)
   }
 }
 
@@ -112,6 +126,25 @@ const capitalize = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : ''
             </div>
           </div>
         </div>
+
+        <div class="flex items-start gap-3">
+          <div class="w-10 h-10 rounded-xl gradient-primary-soft flex items-center justify-center flex-none">
+            <span class="material-symbols-outlined text-primary text-[20px]">footprint</span>
+          </div>
+          <div>
+            <p class="text-xs font-label text-on-surface-variant">Características del calzado</p>
+            <div class="flex flex-wrap gap-1.5 mt-1">
+              <span
+                v-for="feat in userStore.shoeFeatures"
+                :key="feat"
+                class="px-3 py-1 rounded-full bg-surface-container text-xs font-label font-semibold text-on-surface-variant"
+              >
+                {{ capitalize(feat.replace('-', ' ')) }}
+              </span>
+              <span v-if="!userStore.shoeFeatures.length" class="text-sm text-on-surface-variant">No definidas</span>
+            </div>
+          </div>
+        </div>
       </template>
 
       <!-- EDIT MODE -->
@@ -151,6 +184,25 @@ const capitalize = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : ''
               >
                 <span class="material-symbols-outlined text-[16px]">{{ ctx.icon }}</span>
                 {{ ctx.label }}
+              </button>
+            </div>
+          </div>
+
+          <!-- Shoe features selector -->
+          <div class="space-y-2">
+            <p class="text-xs font-label font-bold tracking-[0.12em] text-on-surface-variant uppercase">Características del calzado</p>
+            <div class="flex flex-wrap gap-2">
+              <button
+                v-for="feat in shoeFeatures"
+                :key="feat.id"
+                class="flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-label font-semibold transition-all duration-200 active:scale-95"
+                :class="editShoeFeatures.includes(feat.id)
+                  ? 'gradient-primary text-white shadow-primary-glow'
+                  : 'bg-surface-container text-on-surface-variant hover:bg-surface-container-high'"
+                @click="toggleShoeFeature(feat.id)"
+              >
+                <span class="material-symbols-outlined text-[16px]">{{ feat.icon }}</span>
+                {{ feat.label }}
               </button>
             </div>
           </div>

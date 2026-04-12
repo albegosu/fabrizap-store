@@ -25,6 +25,7 @@ const topPicks = computed(() => recommendedProducts.value.slice(0, 8))
 const hasData = computed(() =>
   userStore.stylePreference ||
   userStore.contexts.length > 0 ||
+  userStore.shoeFeatures.length > 0 ||
   catalogStore.favorites.length > 0 ||
   wardrobeStore.totalItems > 0
 )
@@ -59,6 +60,14 @@ const hasData = computed(() =>
           class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container text-on-surface-variant font-label font-semibold text-xs"
         >
           {{ capitalize(ctx) }}
+        </span>
+        <span
+          v-for="feat in userStore.shoeFeatures"
+          :key="feat"
+          class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-primary/10 text-primary font-label font-semibold text-xs"
+        >
+          <span class="material-symbols-outlined text-[14px]">footprint</span>
+          {{ capitalize(feat.replace('-', ' ')) }}
         </span>
         <span
           v-if="catalogStore.favorites.length > 0"

@@ -159,6 +159,7 @@
     ],
     "style": ["formal"],
     "context": ["oficina", "eventos"],
+    "shoeFeatures": ["comodo", "suela-plana", "con-cordon"],
     "features": [
       { "icon": "workspace_premium", "title": "Artesanal", "description": "Cosido a mano Goodyear Welt." },
       { "icon": "eco", "title": "Cuero Vegetal", "description": "Curtición tradicional mediterránea." },
@@ -194,6 +195,7 @@
     ],
     "style": ["casual"],
     "context": ["diario", "viajes"],
+    "shoeFeatures": ["comodo", "suela-plana", "con-cordon", "ligero", "transpirable"],
     "features": [
       { "icon": "eco", "title": "Sostenible", "description": "Canvas de algodón orgánico certificado." },
       { "icon": "spa", "title": "Ligero", "description": "Solo 280g por zapatilla." },
@@ -229,6 +231,7 @@
     ],
     "style": ["casual", "formal"],
     "context": ["diario", "oficina"],
+    "shoeFeatures": ["comodo", "suela-plana", "con-cordon", "impermeable"],
     "features": [
       { "icon": "eco", "title": "Ante Premium", "description": "Serraje italiano de primera selección." },
       { "icon": "spa", "title": "Comodidad", "description": "Amortiguación de gel en el talón." },
@@ -264,6 +267,7 @@
     ],
     "style": ["casual"],
     "context": ["diario", "eventos"],
+    "shoeFeatures": ["comodo", "suela-plana", "con-cordon", "ligero"],
     "features": [
       { "icon": "workspace_premium", "title": "Luxury", "description": "Materiales premium de 5 orígenes." },
       { "icon": "spa", "title": "Confort Total", "description": "Suela de doble amortiguación." },
@@ -299,6 +303,7 @@
     ],
     "style": ["formal", "casual"],
     "context": ["oficina", "eventos"],
+    "shoeFeatures": ["comodo", "suela-plana", "sin-cordon", "impermeable"],
     "features": [
       { "icon": "eco", "title": "Pull-Up Leather", "description": "Cuero que desarrolla pátina única." },
       { "icon": "spa", "title": "Todo el día", "description": "Plantilla de corcho moldeada." },
@@ -334,6 +339,7 @@
     ],
     "style": ["casual"],
     "context": ["diario", "viajes"],
+    "shoeFeatures": ["comodo", "suela-plana", "sin-cordon", "transpirable", "ligero"],
     "features": [
       { "icon": "spa", "title": "Comodidad", "description": "Suela flex para largas caminatas." },
       { "icon": "eco", "title": "Natural", "description": "Gamuza con tinte natural." },
@@ -369,6 +375,7 @@
     ],
     "style": ["formal"],
     "context": ["oficina", "eventos"],
+    "shoeFeatures": ["tacon", "sin-cordon", "comodo"],
     "features": [
       { "icon": "workspace_premium", "title": "Elegancia", "description": "Acabado brillo sutil a mano." },
       { "icon": "spa", "title": "Confort Ejecutivo", "description": "Plantilla dual-density." },
@@ -404,6 +411,7 @@
     ],
     "style": ["casual"],
     "context": ["diario", "viajes"],
+    "shoeFeatures": ["comodo", "suela-plana", "sin-cordon", "ligero", "transpirable"],
     "features": [
       { "icon": "spa", "title": "Memory Foam", "description": "Plantilla de memoria ultra-suave." },
       { "icon": "sprint", "title": "Sin ataduras", "description": "Elásticos ocultos para entry fácil." },
@@ -439,6 +447,7 @@
     ],
     "style": ["casual", "formal"],
     "context": ["diario", "viajes"],
+    "shoeFeatures": ["comodo", "suela-plana", "con-cordon", "impermeable", "transpirable"],
     "features": [
       { "icon": "security", "title": "Resistente", "description": "Suela de alto rendimiento." },
       { "icon": "eco", "title": "Cuero CFS", "description": "Cuero curtido sin cromo." },
@@ -474,6 +483,7 @@
     ],
     "style": ["casual"],
     "context": ["diario", "viajes"],
+    "shoeFeatures": ["comodo", "suela-plana", "sin-cordon", "transpirable", "ligero"],
     "features": [
       { "icon": "eco", "title": "Artesanal", "description": "Yute trenzado a mano en Valencia." },
       { "icon": "spa", "title": "Transpirable", "description": "Cuero y lino natural." },
@@ -509,6 +519,7 @@
     ],
     "style": ["formal"],
     "context": ["oficina", "eventos"],
+    "shoeFeatures": ["tacon", "sin-cordon", "comodo"],
     "features": [
       { "icon": "workspace_premium", "title": "Elegancia", "description": "Diseño atemporal y sofisticado." },
       { "icon": "spa", "title": "Confort", "description": "Plantilla anatómica acolchada." },
@@ -544,6 +555,7 @@
     ],
     "style": ["casual"],
     "context": ["diario", "viajes"],
+    "shoeFeatures": ["comodo", "suela-plana", "sin-cordon", "ligero"],
     "features": [
       { "icon": "spa", "title": "Ultra-suave", "description": "Cuero napa sin forro." },
       { "icon": "eco", "title": "Artesanal", "description": "Cosido a mano tradicional." },
