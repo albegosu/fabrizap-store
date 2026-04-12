@@ -11,7 +11,10 @@ const showNav = computed(() => !route.meta.hideNav)
 
 <template>
   <div class="min-h-dvh bg-surface flex justify-center">
-    <div class="w-full max-w-[430px] relative min-h-dvh flex flex-col">
+    <div
+      id="app-layout-column"
+      class="app-max-width relative min-h-dvh flex flex-col"
+    >
       <AppHeader v-if="showNav" />
       <main
         class="flex-1"

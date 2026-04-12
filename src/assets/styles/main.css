@@ -57,8 +57,75 @@
     font-family: var(--font-body);
     color: var(--color-on-surface);
     background-color: var(--color-surface);
+    color-scheme: light;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  html.dark {
+    color-scheme: dark;
+
+    --color-surface: #121418;
+    --color-surface-container: #1c1f26;
+    --color-surface-container-low: #181b22;
+    --color-surface-container-lowest: #0e1014;
+    --color-surface-container-high: #262a32;
+    --color-surface-container-highest: #30353e;
+    --color-surface-bright: #383e48;
+    --color-surface-dim: #0a0b0d;
+
+    --color-primary: #d4c4f7;
+    --color-primary-container: #4a3f6e;
+    --color-primary-fixed: #e7deff;
+    --color-primary-fixed-dim: #6b5b9e;
+
+    --color-secondary: #d4bcff;
+    --color-secondary-container: #5a3d7a;
+    --color-secondary-fixed: #eddcff;
+
+    --color-tertiary: #cab9e8;
+    --color-tertiary-container: #3d3550;
+
+    --color-on-surface: #e8eaed;
+    --color-on-surface-variant: #9aa0ab;
+    --color-on-primary: #1b2631;
+    --color-on-primary-container: #e7deff;
+    --color-on-secondary: #1b2631;
+    --color-on-secondary-container: #eddcff;
+
+    --color-outline: #6f6a7a;
+    --color-outline-variant: #3d3a45;
+
+    --color-error: #ffb4ab;
+    --color-error-container: #93000a;
+    --color-on-error: #ffffff;
+
+    --color-inverse-surface: #e8eaed;
+    --color-inverse-on-surface: #1b2631;
+    --color-inverse-primary: #5e4796;
+  }
+}
+
+@layer components {
+  /** Ancho máximo del “teléfono” en móvil; crece en desktop manteniendo la app centrada. */
+  .app-max-width {
+    width: 100%;
+    max-width: 430px;
+  }
+  @media (min-width: 768px) {
+    .app-max-width {
+      max-width: 640px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .app-max-width {
+      max-width: 780px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .app-max-width {
+      max-width: 920px;
+    }
   }
 }
 
@@ -97,5 +164,25 @@
   }
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
+  }
+
+  html.dark .glass {
+    background-color: rgba(18, 20, 24, 0.78);
+  }
+
+  html.dark .gradient-primary-soft {
+    background: linear-gradient(
+      135deg,
+      rgba(212, 196, 247, 0.14) 0%,
+      rgba(212, 188, 255, 0.14) 100%
+    );
+  }
+
+  html.dark .shadow-ambient {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+  }
+
+  html.dark .shadow-primary-glow {
+    box-shadow: 0 4px 22px rgba(186, 174, 231, 0.22);
   }
 }

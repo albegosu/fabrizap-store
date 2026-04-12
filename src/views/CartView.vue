@@ -1,6 +1,7 @@
 <script setup>
 import { useRouter } from 'vue-router'
 import { useCartStore } from '@/stores/cartStore'
+import ThemeToggle from '@/components/common/ThemeToggle.vue'
 
 const router = useRouter()
 const cartStore = useCartStore()
@@ -25,9 +26,10 @@ function goHome() {
       >
         <span class="material-symbols-outlined text-on-surface">arrow_back</span>
       </button>
-      <h1 class="text-xl font-headline font-extrabold tracking-tight text-on-surface">
+      <h1 class="text-xl font-headline font-extrabold tracking-tight text-on-surface flex-1 min-w-0">
         Mi Carrito
       </h1>
+      <ThemeToggle />
     </header>
 
     <!-- Order confirmed -->
@@ -113,7 +115,7 @@ function goHome() {
     <!-- Sticky footer -->
     <div
       v-if="cartStore.items.length > 0 && !cartStore.orderConfirmed"
-      class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] px-5 pb-5 pt-3 glass z-40 space-y-3"
+      class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full app-max-width px-5 pb-5 pt-3 glass z-40 space-y-3"
     >
       <div class="flex items-baseline justify-between">
         <span class="text-sm text-on-surface-variant font-label">Total ({{ cartStore.totalItems }} artículos)</span>

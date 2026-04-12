@@ -1,11 +1,13 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { FABRIZAP_LOGO_URL } from '@/constants/brand'
 import { useUserStore } from '@/stores/userStore'
 import ProgressBar from '@/components/onboarding/ProgressBar.vue'
 import StyleSelector from '@/components/onboarding/StyleSelector.vue'
 import ContextChips from '@/components/onboarding/ContextChips.vue'
 import ShoeFeatureChips from '@/components/onboarding/ShoeFeatureChips.vue'
+import ThemeToggle from '@/components/common/ThemeToggle.vue'
 
 const router = useRouter()
 const userStore = useUserStore()
@@ -44,17 +46,19 @@ function skip() {
 <template>
   <div class="min-h-dvh bg-surface flex flex-col">
     <!-- Header -->
-    <header class="flex justify-between items-center px-5 pt-5 pb-2">
-      <div class="flex items-center gap-1.5">
-        <span class="material-symbols-outlined text-primary text-xl">diamond</span>
-        <span class="text-xl font-extrabold tracking-tight font-headline text-gradient-primary">FABRIZAP</span>
+    <header class="flex justify-between items-center px-5 pt-5 pb-2 gap-2">
+      <div class="flex items-center min-w-0">
+        <img :src="FABRIZAP_LOGO_URL" alt="FabriZap" class="h-9 w-auto" />
       </div>
-      <button
-        class="text-sm font-label font-semibold text-on-surface-variant hover:text-primary transition-colors"
-        @click="skip"
-      >
-        SKIP
-      </button>
+      <div class="flex items-center gap-0.5 shrink-0">
+        <ThemeToggle />
+        <button
+          class="text-sm font-label font-semibold text-on-surface-variant hover:text-primary transition-colors px-2 py-2"
+          @click="skip"
+        >
+          SKIP
+        </button>
+      </div>
     </header>
 
     <main class="flex-1 px-5 pb-8 flex flex-col">

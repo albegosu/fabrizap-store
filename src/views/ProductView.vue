@@ -11,6 +11,7 @@ import ColorSelector from '@/components/product/ColorSelector.vue'
 import CombinationSuggestions from '@/components/product/CombinationSuggestions.vue'
 import ProductReviews from '@/components/product/ProductReviews.vue'
 import FavButton from '@/components/common/FavButton.vue'
+import ThemeToggle from '@/components/common/ThemeToggle.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -45,7 +46,10 @@ function addToCart() {
       >
         <span class="material-symbols-outlined text-on-surface">arrow_back</span>
       </button>
-      <FavButton :product-id="product.id" size="lg" />
+      <div class="flex items-center gap-1">
+        <ThemeToggle />
+        <FavButton :product-id="product.id" size="lg" />
+      </div>
     </div>
 
     <!-- Gallery -->
@@ -107,7 +111,7 @@ function addToCart() {
     </div>
 
     <!-- Sticky CTA -->
-    <div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] z-40">
+    <div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full app-max-width z-40">
       <div class="px-5 pb-6 pt-4 bg-surface border-t border-outline-variant/10">
         <button
           class="w-full h-14 rounded-full font-headline font-bold text-base tracking-tight flex items-center justify-center gap-2 transition-all active:scale-[0.98]"

@@ -23,7 +23,9 @@ function navigate(tab) {
 </script>
 
 <template>
-  <nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] z-50 bg-surface border-t border-outline-variant/10">
+  <nav
+    class="app-bottom-nav fixed bottom-0 left-1/2 -translate-x-1/2 w-full app-max-width z-50 bg-surface border-t border-outline-variant/10"
+  >
     <div class="flex justify-around items-end px-1 pb-5 pt-1.5 relative">
       <template v-for="tab in tabs" :key="tab.name">
         <!-- Center FabriZap button -->
@@ -38,14 +40,16 @@ function navigate(tab) {
               ? 'gradient-primary shadow-primary-glow'
               : 'bg-surface-container-lowest shadow-ambient ring-1 ring-outline-variant/15'"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 256 256"
-              class="w-6 h-6"
-              :fill="activeTab === tab.name ? '#FFFFFF' : '#baaee7'"
-            >
-              <path d="M32,144a95.28,95.28,0,0,1,37.53,7.67,4,4,0,0,1,2.47,3.7V192a16,16,0,0,1-16,16H40a16,16,0,0,1-16-16V148a4,4,0,0,1,4-4Zm199,12.19L180,144.71,69.66,34.34a8,8,0,0,0-11.56.26C36.11,58.64,24,89,24,120a8,8,0,0,0,8,8,111.2,111.2,0,0,1,63.34,19.7,112.45,112.45,0,0,1,40.55,50.39A15.9,15.9,0,0,0,150.72,208H240a16,16,0,0,0,16-16v-4.73A31.72,31.72,0,0,0,231,156.19Z"/>
-            </svg>
+            <img
+              src="/shoe-logo.png"
+              alt=""
+              width="24"
+              height="24"
+              class="w-6 h-6 object-contain transition-[filter,opacity] pointer-events-none"
+              :class="activeTab === tab.name
+                ? 'brightness-0 invert opacity-100'
+                : 'opacity-95'"
+            />
           </div>
           <span
             class="text-[9px] font-label font-bold tracking-wider uppercase mt-1 transition-colors"

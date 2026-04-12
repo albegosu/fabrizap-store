@@ -2,6 +2,8 @@
 import { useRouter } from 'vue-router'
 import { useCartStore } from '@/stores/cartStore'
 import { computed } from 'vue'
+import { FABRIZAP_LOGO_URL } from '@/constants/brand'
+import ThemeToggle from '@/components/common/ThemeToggle.vue'
 
 const router = useRouter()
 const cartStore = useCartStore()
@@ -9,20 +11,19 @@ const cartCount = computed(() => cartStore.totalItems)
 </script>
 
 <template>
-  <header class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] z-50 glass flex justify-between items-center px-5 h-16 border-b border-outline-variant/10">
+  <header
+    class="app-top-header fixed top-0 left-1/2 -translate-x-1/2 w-full app-max-width z-50 glass flex justify-between items-center px-5 h-16 border-b border-outline-variant/10"
+  >
     <button
       class="flex items-center gap-1 cursor-pointer"
       @click="router.push('/')"
     >
-      <img
-        src="https://lh3.googleusercontent.com/aida/ADBb0ui9sR3ypBKWQZwZbPXBwrXG9FzUt4HaGob2GnYi0d5-jYny441ry7kKYtz5vVhm9TaxoCFBsqdmjJVZFjvoweeYxiuZyRp9G0ifflazG7tZU8OeeFSLfhgrAQ74g19zGsFOaLumZ4lAix-PCJItU-TVIdb2EMAfPw2y3S-7g4HkqiVKcgrtLbO-bzFYpX2pUSPAnwcmp5weK5Vv4LAPTHK5va047bYzC-zvFHdoXRbhMLUVov-2qkxtVxA7Re2FSXWF8PnxbCYMgw"
-        alt="FabriZap"
-        class="h-9 w-auto"
-      />
+      <img :src="FABRIZAP_LOGO_URL" alt="FabriZap" class="h-9 w-auto" />
     </button>
-    <div class="flex items-center gap-2">
+    <div class="flex items-center gap-1">
+      <ThemeToggle />
       <button
-        class="relative p-2 rounded-full hover:bg-surface-container-high/60 transition-colors"
+        class="relative h-10 w-10 shrink-0 inline-flex items-center justify-center rounded-full hover:bg-surface-container-high/60 transition-colors"
         @click="router.push('/carrito')"
       >
         <span class="material-symbols-outlined text-on-surface-variant text-[22px]">shopping_bag</span>
