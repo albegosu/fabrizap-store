@@ -1,0 +1,23 @@
+{
+  "styles": [
+    { "id": "casual", "label": "Casual", "description": "Confort y versatilidad diaria", "icon": "apparel" },
+    { "id": "sporty", "label": "Sporty", "description": "Dinámico, activo y moderno", "icon": "sports_tennis" },
+    { "id": "formal", "label": "Formal", "description": "Elegancia y sofisticación sutil", "icon": "styler" }
+  ],
+  "contexts": [
+    { "id": "diario", "label": "Diario", "icon": "sunny" },
+    { "id": "oficina", "label": "Oficina", "icon": "work" },
+    { "id": "eventos", "label": "Eventos", "icon": "celebration" },
+    { "id": "viajes", "label": "Viajes", "icon": "flight" }
+  ],
+  "shoeFeatures": [
+    { "id": "comodo", "label": "Cómodo", "icon": "spa" },
+    { "id": "suela-plana", "label": "Suela plana", "icon": "horizontal_rule" },
+    { "id": "tacon", "label": "Tacón", "icon": "stairs" },
+    { "id": "transpirable", "label": "Transpirable", "icon": "air" },
+    { "id": "con-cordon", "label": "Con cordón", "icon": "cable" },
+    { "id": "sin-cordon", "label": "Sin cordón", "icon": "do_not_disturb_on" },
+    { "id": "ligero", "label": "Ligero", "icon": "feather" },
+    { "id": "impermeable", "label": "Impermeable", "icon": "water_drop" }
+  ]
+}

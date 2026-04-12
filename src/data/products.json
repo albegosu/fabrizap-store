@@ -1,0 +1,566 @@
+[
+  {
+    "id": "heritage-low-top",
+    "name": "Heritage Low-Top",
+    "category": "sneakers",
+    "description": "Una silueta atemporal que redefine el concepto de elegancia urbana a través de materiales nobles y construcción artesanal.",
+    "price": 189.00,
+    "originalPrice": 249.00,
+    "currency": "€",
+    "badge": "Edición Limitada",
+    "image": "https://images.unsplash.com/photo-1616406432452-07bc5938759d?w=600&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1616406432452-07bc5938759d?w=600&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1662541089338-c7d53b88be70?w=600&h=600&fit=crop"
+    ],
+    "style": ["casual", "formal"],
+    "context": ["diario", "oficina"],
+    "shoeFeatures": ["comodo", "suela-plana", "con-cordon"],
+    "features": [
+      { "icon": "spa", "title": "Comodidad", "description": "Plantilla con memoria anatómica." },
+      { "icon": "eco", "title": "Cuero Premium", "description": "Curtido vegetal de grano completo." },
+      { "icon": "straighten", "title": "Horma Estándar", "description": "Ajuste perfecto fiel a tu talla." }
+    ],
+    "technicalSheet": {
+      "capellada": "Cuero de becerro italiano seleccionado por su suavidad y durabilidad.",
+      "suela": "Caucho reciclado de alta densidad con patrón de tracción multisuperficie.",
+      "construccion": "Costura lateral de 360 grados que garantiza una vida útil prolongada."
+    },
+    "sizes": [35, 36, 37, 38, 39, 40, 41],
+    "colors": ["#1B2631", "#baaee7", "#8B7355", "#FFFFFF"],
+    "quote": "Diseñados para envejecer con carácter, desarrollando una pátina única que narra tu propia historia.",
+    "reviews": [
+      { "user": "Laura M.", "rating": 5, "text": "La calidad del cuero se nota desde el primer momento. Son increíblemente cómodas desde el primer uso.", "tag": "material" },
+      { "user": "Carmen R.", "rating": 5, "text": "Pedí mi talla habitual y el ajuste es perfecto. Las combiné con vestido midi y quedaron geniales.", "tag": "talla" },
+      { "user": "Sofía P.", "rating": 4, "text": "El envío llegó en 24h, súper bien empaquetado. Las zapatillas son preciosas.", "tag": "envío" }
+    ]
+  },
+  {
+    "id": "terra-classic",
+    "name": "Terra Classic",
+    "category": "sneakers",
+    "description": "Inspirado en la esencia mediterránea, este sneaker combina líneas minimalistas con la calidez del cuero natural.",
+    "price": 249.00,
+    "originalPrice": null,
+    "currency": "€",
+    "badge": null,
+    "image": "https://images.unsplash.com/photo-1537886194634-e6b923f92ff1?w=600&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1537886194634-e6b923f92ff1?w=600&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1614676498010-8b7ead323f1e?w=600&h=600&fit=crop"
+    ],
+    "style": ["casual"],
+    "context": ["diario"],
+    "shoeFeatures": ["comodo", "suela-plana", "con-cordon", "impermeable"],
+    "features": [
+      { "icon": "spa", "title": "Comodidad", "description": "Base amortiguada de doble densidad." },
+      { "icon": "eco", "title": "Cuero Premium", "description": "Nubuck resistente al agua." },
+      { "icon": "straighten", "title": "Horma Amplia", "description": "Diseño para confort prolongado." }
+    ],
+    "technicalSheet": {
+      "capellada": "Nubuck de primera calidad con tratamiento hidrofóbico.",
+      "suela": "EVA inyectada con refuerzo de TPU en el talón.",
+      "construccion": "Montado a mano con técnica de pegado en frío."
+    },
+    "sizes": [35, 36, 37, 38, 39, 40, 41],
+    "colors": ["#C4A882", "#1B2631", "#FFFFFF"],
+    "quote": null,
+    "reviews": [
+      { "user": "Ana G.", "rating": 5, "text": "El nubuck es de una calidad espectacular. Se nota que es artesanal.", "tag": "material" },
+      { "user": "Elena V.", "rating": 5, "text": "Las llevo todos los días a la oficina con pantalones de pinzas. Combinación perfecta.", "tag": "combinación" },
+      { "user": "Marta L.", "rating": 4, "text": "Muy cómodas para caminar. La suela amortigua genial.", "tag": "comodidad" }
+    ]
+  },
+  {
+    "id": "vienna-ballet",
+    "name": "Vienna Ballet",
+    "category": "casual",
+    "description": "Bailarina clásica en cuero suave con detalle de lazo y suela flexible para todo el día.",
+    "price": 120.00,
+    "originalPrice": null,
+    "currency": "€",
+    "badge": null,
+    "image": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=600&h=600&fit=crop"
+    ],
+    "style": ["casual", "formal"],
+    "context": ["diario", "oficina"],
+    "shoeFeatures": ["comodo", "suela-plana", "ligero", "sin-cordon"],
+    "features": [
+      { "icon": "spa", "title": "Ultraligera", "description": "Solo 180g por zapatilla." },
+      { "icon": "eco", "title": "Piel Natural", "description": "Cuero curtido sin cromo." },
+      { "icon": "straighten", "title": "Horma Flexible", "description": "Suela que se adapta a tu pie." }
+    ],
+    "technicalSheet": {
+      "capellada": "Cuero napa italiano de primera selección.",
+      "suela": "Caucho natural ultrafino con flex grooves.",
+      "construccion": "Montaje cementado con forro de piel."
+    },
+    "sizes": [35, 36, 37, 38, 39, 40, 41],
+    "colors": ["#F5E6D3", "#1B2631", "#baaee7"],
+    "quote": null,
+    "reviews": [
+      { "user": "Patricia S.", "rating": 5, "text": "Son tan ligeras que parece que no llevas nada. Perfectas para primavera.", "tag": "comodidad" },
+      { "user": "Isabel F.", "rating": 5, "text": "El cuero es suavísimo. Las combiné con falda plisada y quedan divinas.", "tag": "combinación" },
+      { "user": "Rocío A.", "rating": 4, "text": "Talla perfecta, pedí la mía y no tuve que cambiar. Envío rápido.", "tag": "talla" }
+    ]
+  },
+  {
+    "id": "milano-loafer",
+    "name": "Milano Loafer",
+    "category": "formal",
+    "description": "Mocasín penny clásico para mujer, fabricado en cuero plena flor con acabado artesanal.",
+    "price": 210.00,
+    "originalPrice": 260.00,
+    "currency": "€",
+    "badge": "Best Seller",
+    "image": "https://images.unsplash.com/photo-1575131141058-dccffccceec9?w=600&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1575131141058-dccffccceec9?w=600&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1576792741377-eb0f4f6d1a47?w=600&h=600&fit=crop"
+    ],
+    "style": ["formal", "casual"],
+    "context": ["oficina", "eventos"],
+    "shoeFeatures": ["comodo", "suela-plana", "sin-cordon"],
+    "features": [
+      { "icon": "workspace_premium", "title": "Premium", "description": "Cuero plena flor seleccionado." },
+      { "icon": "spa", "title": "Confort Plus", "description": "Plantilla de cuero acolchada." },
+      { "icon": "straighten", "title": "Horma Clásica", "description": "Silueta atemporal europea." }
+    ],
+    "technicalSheet": {
+      "capellada": "Cuero plena flor con acabado semi-brillo.",
+      "suela": "Cuero con media suela de goma antideslizante.",
+      "construccion": "Blake Stitch con refuerzo interno."
+    },
+    "sizes": [35, 36, 37, 38, 39, 40, 41],
+    "colors": ["#1B2631", "#4A3728", "#DEB887"],
+    "quote": null,
+    "reviews": [
+      { "user": "Lucía D.", "rating": 5, "text": "Los llevo a la oficina cada día. El cuero se ha amoldado perfectamente a mi pie.", "tag": "material" },
+      { "user": "María J.", "rating": 5, "text": "El acabado artesanal se nota. Recibí muchos cumplidos la primera vez que los estrené.", "tag": "combinación" },
+      { "user": "Beatriz N.", "rating": 5, "text": "Compra segura: buena caja, envío express y el producto es tal cual las fotos.", "tag": "envío" }
+    ]
+  },
+  {
+    "id": "oxford-elena",
+    "name": "Oxford Elena",
+    "category": "formal",
+    "description": "El clásico Oxford femenino reinventado con técnicas artesanales del Mediterráneo y cuero de curtición vegetal.",
+    "price": 190.00,
+    "originalPrice": null,
+    "currency": "€",
+    "badge": null,
+    "image": "https://images.unsplash.com/photo-1560343090-f0409e92791a?w=600&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1560343090-f0409e92791a?w=600&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=600&h=600&fit=crop"
+    ],
+    "style": ["formal"],
+    "context": ["oficina", "eventos"],
+    "features": [
+      { "icon": "workspace_premium", "title": "Artesanal", "description": "Cosido a mano Goodyear Welt." },
+      { "icon": "eco", "title": "Cuero Vegetal", "description": "Curtición tradicional mediterránea." },
+      { "icon": "spa", "title": "Confort", "description": "Plantilla de corcho anatómico." }
+    ],
+    "technicalSheet": {
+      "capellada": "Cuero box calf pulido a mano.",
+      "suela": "Cuero de suela con tapa de goma.",
+      "construccion": "Goodyear Welt de doble costura."
+    },
+    "sizes": [35, 36, 37, 38, 39, 40, 41],
+    "colors": ["#4A3728", "#1B2631", "#6B2D2D"],
+    "quote": null,
+    "reviews": [
+      { "user": "Teresa C.", "rating": 5, "text": "La costura Goodyear Welt es impecable. Se nota la calidad artesanal.", "tag": "material" },
+      { "user": "Pilar B.", "rating": 4, "text": "Ideales para reuniones. Las combiné con traje sastre y el look es espectacular.", "tag": "combinación" },
+      { "user": "Andrea M.", "rating": 5, "text": "Talla exacta. La plantilla de corcho se adapta al pie en pocos días.", "tag": "talla" }
+    ]
+  },
+  {
+    "id": "canvas-provence",
+    "name": "Canvas Provence",
+    "category": "sneakers",
+    "description": "Ligereza y estilo en un canvas premium de algodón orgánico con suela vulcanizada.",
+    "price": 89.00,
+    "originalPrice": null,
+    "currency": "€",
+    "badge": null,
+    "image": "https://images.unsplash.com/photo-1534653299134-96a171b61581?w=600&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1534653299134-96a171b61581?w=600&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?w=600&h=600&fit=crop"
+    ],
+    "style": ["casual"],
+    "context": ["diario", "viajes"],
+    "features": [
+      { "icon": "eco", "title": "Sostenible", "description": "Canvas de algodón orgánico certificado." },
+      { "icon": "spa", "title": "Ligero", "description": "Solo 280g por zapatilla." },
+      { "icon": "straighten", "title": "Horma Regular", "description": "Fit universal cómodo." }
+    ],
+    "technicalSheet": {
+      "capellada": "Canvas de algodón orgánico 12oz.",
+      "suela": "Caucho vulcanizado natural.",
+      "construccion": "Vulcanizado tradicional con ribete textil."
+    },
+    "sizes": [35, 36, 37, 38, 39, 40, 41, 42],
+    "colors": ["#FFFFFF", "#1B2631", "#F5DEB3", "#8FBC8F"],
+    "quote": null,
+    "reviews": [
+      { "user": "Clara H.", "rating": 5, "text": "Perfectas para viajar. Ligerísimas y combinan con todo.", "tag": "comodidad" },
+      { "user": "Julia T.", "rating": 4, "text": "El algodón orgánico se siente muy bien. Me encanta que sean sostenibles.", "tag": "material" },
+      { "user": "Nuria E.", "rating": 5, "text": "Pedido impecable, llegaron en 48h en una caja reciclable preciosa.", "tag": "envío" }
+    ]
+  },
+  {
+    "id": "velvet-urbana",
+    "name": "Velvet Urbana",
+    "category": "sneakers",
+    "description": "Sneaker premium con acabado en ante y detalles sutiles para un look sofisticado y femenino.",
+    "price": 175.00,
+    "originalPrice": null,
+    "currency": "€",
+    "badge": null,
+    "image": "https://images.unsplash.com/photo-1615979474401-8a6a344de5bd?w=600&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1615979474401-8a6a344de5bd?w=600&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1576792741377-eb0f4f6d1a47?w=600&h=600&fit=crop"
+    ],
+    "style": ["casual", "formal"],
+    "context": ["diario", "oficina"],
+    "features": [
+      { "icon": "eco", "title": "Ante Premium", "description": "Serraje italiano de primera selección." },
+      { "icon": "spa", "title": "Comodidad", "description": "Amortiguación de gel en el talón." },
+      { "icon": "straighten", "title": "Horma Moderna", "description": "Perfil medio, fit contemporáneo." }
+    ],
+    "technicalSheet": {
+      "capellada": "Serraje italiano con acabado water-repellent.",
+      "suela": "Bi-densidad EVA/caucho con flex grooves.",
+      "construccion": "Strobel con contrafuerte termoplástico."
+    },
+    "sizes": [35, 36, 37, 38, 39, 40, 41],
+    "colors": ["#FFFFFF", "#baaee7", "#1B2631"],
+    "quote": null,
+    "reviews": [
+      { "user": "Alejandra R.", "rating": 5, "text": "El ante es precioso y resistente al agua. Perfectas para otoño.", "tag": "material" },
+      { "user": "Cristina L.", "rating": 5, "text": "Las combiné con blazer y pantalón wide-leg. Un look increíble.", "tag": "combinación" },
+      { "user": "Paula G.", "rating": 4, "text": "Comodísimas desde el primer momento. La amortiguación de gel se nota.", "tag": "comodidad" }
+    ]
+  },
+  {
+    "id": "aether-prime",
+    "name": "Aether Prime",
+    "category": "sneakers",
+    "description": "Nuestra zapatilla más emblemática, reimaginada con texturas de lujo envolventes y elegancia atemporal.",
+    "price": 320.00,
+    "originalPrice": null,
+    "currency": "€",
+    "badge": "Edición Limitada",
+    "image": "https://images.unsplash.com/photo-1523742348304-8e67f3cafc08?w=600&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1523742348304-8e67f3cafc08?w=600&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1613772036673-3cbb93d8ef57?w=600&h=600&fit=crop"
+    ],
+    "style": ["casual"],
+    "context": ["diario", "eventos"],
+    "features": [
+      { "icon": "workspace_premium", "title": "Luxury", "description": "Materiales premium de 5 orígenes." },
+      { "icon": "spa", "title": "Confort Total", "description": "Suela de doble amortiguación." },
+      { "icon": "eco", "title": "Sostenible", "description": "50% materiales reciclados." }
+    ],
+    "technicalSheet": {
+      "capellada": "Mix de cuero premium y ante italiano.",
+      "suela": "EVA de triple densidad con flex grooves.",
+      "construccion": "Ensamblaje artesanal de precisión."
+    },
+    "sizes": [35, 36, 37, 38, 39, 40, 41],
+    "colors": ["#baaee7", "#1B2631", "#FFFFFF"],
+    "quote": null,
+    "reviews": [
+      { "user": "Valentina O.", "rating": 5, "text": "Una obra de arte. Los materiales reciclados no sacrifican nada de calidad.", "tag": "material" },
+      { "user": "Diana S.", "rating": 5, "text": "Las estrené en un evento y fueron la sensación. Únicas de verdad.", "tag": "combinación" },
+      { "user": "Inés P.", "rating": 5, "text": "Envío express perfecto. Llegaron en caja premium con papel de seda. Experiencia de lujo.", "tag": "envío" }
+    ]
+  },
+  {
+    "id": "chelsea-amelia",
+    "name": "Chelsea Amelia",
+    "category": "formal",
+    "description": "El botín Chelsea femenino esencial, con líneas limpias y cuero pull-up que envejece con carácter.",
+    "price": 230.00,
+    "originalPrice": null,
+    "currency": "€",
+    "badge": null,
+    "image": "https://images.unsplash.com/photo-1605733160314-4fc7dac4bb16?w=600&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1605733160314-4fc7dac4bb16?w=600&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1638247025967-b4e38f787b76?w=600&h=600&fit=crop"
+    ],
+    "style": ["formal", "casual"],
+    "context": ["oficina", "eventos"],
+    "features": [
+      { "icon": "eco", "title": "Pull-Up Leather", "description": "Cuero que desarrolla pátina única." },
+      { "icon": "spa", "title": "Todo el día", "description": "Plantilla de corcho moldeada." },
+      { "icon": "security", "title": "Durabilidad", "description": "Suela resistente al desgaste." }
+    ],
+    "technicalSheet": {
+      "capellada": "Cuero pull-up encerado de curtición lenta.",
+      "suela": "Caucho con patrón antideslizante.",
+      "construccion": "Goodyear Welt 270°."
+    },
+    "sizes": [35, 36, 37, 38, 39, 40, 41],
+    "colors": ["#1B2631", "#4A3728"],
+    "quote": null,
+    "reviews": [
+      { "user": "Claudia W.", "rating": 5, "text": "El cuero pull-up es una maravilla. Con el uso se pone cada vez más bonito.", "tag": "material" },
+      { "user": "Lorena K.", "rating": 5, "text": "Ideales con skinny jeans o falda midi. Son muy versátiles.", "tag": "combinación" },
+      { "user": "Eva R.", "rating": 4, "text": "La plantilla de corcho es un acierto total. Se moldea a tu pie.", "tag": "comodidad" }
+    ]
+  },
+  {
+    "id": "dune-marbella",
+    "name": "Dune Marbella",
+    "category": "casual",
+    "description": "Inspirada en los tonos del Mediterráneo, esta sandalia combina gamuza y textil para un look veraniego.",
+    "price": 135.00,
+    "originalPrice": null,
+    "currency": "€",
+    "badge": null,
+    "image": "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=600&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=600&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?w=600&h=600&fit=crop"
+    ],
+    "style": ["casual"],
+    "context": ["diario", "viajes"],
+    "features": [
+      { "icon": "spa", "title": "Comodidad", "description": "Suela flex para largas caminatas." },
+      { "icon": "eco", "title": "Natural", "description": "Gamuza con tinte natural." },
+      { "icon": "air", "title": "Transpirable", "description": "Forro textil antibacteriano." }
+    ],
+    "technicalSheet": {
+      "capellada": "Gamuza con paneles de canvas reciclado.",
+      "suela": "Caucho natural con flex points.",
+      "construccion": "Cementado con adhesivo base agua."
+    },
+    "sizes": [35, 36, 37, 38, 39, 40, 41],
+    "colors": ["#D2B48C", "#F5DEB3", "#8B7355"],
+    "quote": null,
+    "reviews": [
+      { "user": "Silvia H.", "rating": 5, "text": "Perfectas para el verano. La gamuza es suave y los tonos son preciosos.", "tag": "material" },
+      { "user": "Raquel M.", "rating": 4, "text": "Las uso para pasear por la playa y la ciudad. Superversátiles.", "tag": "comodidad" },
+      { "user": "Alicia J.", "rating": 5, "text": "Llegaron antes de lo esperado. Muy bien protegidas en el envío.", "tag": "envío" }
+    ]
+  },
+  {
+    "id": "eclipse-stiletto",
+    "name": "Eclipse Stiletto",
+    "category": "formal",
+    "description": "Stiletto elegante con tacón medio y silueta alargada para un equilibrio perfecto entre elegancia y confort.",
+    "price": 198.00,
+    "originalPrice": null,
+    "currency": "€",
+    "badge": null,
+    "image": "https://images.unsplash.com/photo-1596703263926-eb0762ee17e4?w=600&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1596703263926-eb0762ee17e4?w=600&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?w=600&h=600&fit=crop"
+    ],
+    "style": ["formal"],
+    "context": ["oficina", "eventos"],
+    "features": [
+      { "icon": "workspace_premium", "title": "Elegancia", "description": "Acabado brillo sutil a mano." },
+      { "icon": "spa", "title": "Confort Ejecutivo", "description": "Plantilla dual-density." },
+      { "icon": "straighten", "title": "Tacón 6cm", "description": "Altura ideal para todo el día." }
+    ],
+    "technicalSheet": {
+      "capellada": "Cuero napa con acabado satinado.",
+      "suela": "Cuero con tapa de caucho antideslizante.",
+      "construccion": "Blake Rapid doble costura."
+    },
+    "sizes": [35, 36, 37, 38, 39, 40, 41],
+    "colors": ["#1B2631", "#4A3728", "#baaee7"],
+    "quote": null,
+    "reviews": [
+      { "user": "Natalia F.", "rating": 5, "text": "El tacón de 6cm es perfecto: elegante pero sin sufrir. Los llevo todo el día.", "tag": "comodidad" },
+      { "user": "Mónica D.", "rating": 5, "text": "El acabado satinado es divino. Combinan con absolutamente todo.", "tag": "combinación" },
+      { "user": "Sara T.", "rating": 4, "text": "Talla fiel. El cuero napa es de una calidad excepcional.", "tag": "talla" }
+    ]
+  },
+  {
+    "id": "aurora-slip-on",
+    "name": "Aurora Slip-On",
+    "category": "casual",
+    "description": "Slip-on minimalista con elásticos ocultos y plantilla de espuma viscoelástica para el máximo confort.",
+    "price": 95.00,
+    "originalPrice": null,
+    "currency": "€",
+    "badge": "Nuevo",
+    "image": "https://images.unsplash.com/photo-1512174928195-d4f29733eeb2?w=600&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1512174928195-d4f29733eeb2?w=600&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1571617026489-d086c39f1159?w=600&h=600&fit=crop"
+    ],
+    "style": ["casual"],
+    "context": ["diario", "viajes"],
+    "features": [
+      { "icon": "spa", "title": "Memory Foam", "description": "Plantilla de memoria ultra-suave." },
+      { "icon": "sprint", "title": "Sin ataduras", "description": "Elásticos ocultos para entry fácil." },
+      { "icon": "eco", "title": "Eco-Canvas", "description": "Algodón orgánico teñido en masa." }
+    ],
+    "technicalSheet": {
+      "capellada": "Canvas orgánico con elásticos integrados.",
+      "suela": "Vulcanizada eco-friendly.",
+      "construccion": "Slip-on con estructura interna termoplástica."
+    },
+    "sizes": [35, 36, 37, 38, 39, 40, 41],
+    "colors": ["#FFFFFF", "#1B2631", "#baaee7", "#DEB887"],
+    "quote": null,
+    "reviews": [
+      { "user": "Marina C.", "rating": 5, "text": "La plantilla memory foam es una maravilla. No me las quiero quitar.", "tag": "comodidad" },
+      { "user": "Irene B.", "rating": 4, "text": "Geniales para el día a día. Se ponen y quitan en un segundo.", "tag": "comodidad" },
+      { "user": "Lola S.", "rating": 5, "text": "El packaging eco es un detalle precioso. Todo el proceso de compra fue perfecto.", "tag": "envío" }
+    ]
+  },
+  {
+    "id": "sierra-boot",
+    "name": "Sierra Boot",
+    "category": "casual",
+    "description": "Bota corta reinterpretada con cuero premium y suela confort para uso urbano diario.",
+    "price": 285.00,
+    "originalPrice": 340.00,
+    "currency": "€",
+    "badge": null,
+    "image": "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=600&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=600&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1605733160314-4fc7dac4bb16?w=600&h=600&fit=crop"
+    ],
+    "style": ["casual", "formal"],
+    "context": ["diario", "viajes"],
+    "features": [
+      { "icon": "security", "title": "Resistente", "description": "Suela de alto rendimiento." },
+      { "icon": "eco", "title": "Cuero CFS", "description": "Cuero curtido sin cromo." },
+      { "icon": "spa", "title": "Impermeable", "description": "Membrana impermeable y transpirable." }
+    ],
+    "technicalSheet": {
+      "capellada": "Cuero CFS (Chrome-Free) con membrana impermeable.",
+      "suela": "Caucho natural con compound resistente.",
+      "construccion": "Norwegian Welt triple costura."
+    },
+    "sizes": [35, 36, 37, 38, 39, 40, 41],
+    "colors": ["#4A3728", "#1B2631"],
+    "quote": null,
+    "reviews": [
+      { "user": "Gemma V.", "rating": 5, "text": "Las usé en un viaje de 10 días caminando por ciudades europeas. Ni una ampolla.", "tag": "comodidad" },
+      { "user": "Victoria A.", "rating": 5, "text": "La membrana impermeable funciona de verdad. Las probé con lluvia intensa.", "tag": "material" },
+      { "user": "Rosa P.", "rating": 4, "text": "Muy buen packaging y envío rápido. Las botas son tal cual las fotos.", "tag": "envío" }
+    ]
+  },
+  {
+    "id": "riviera-espadrille",
+    "name": "Riviera Espadrille",
+    "category": "casual",
+    "description": "Alpargata artesanal con suela de yute trenzado y cuero suave, perfecta para la brisa costera.",
+    "price": 110.00,
+    "originalPrice": null,
+    "currency": "€",
+    "badge": "Nuevo",
+    "image": "https://images.unsplash.com/photo-1625899845678-3fad6a4a1846?w=600&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1625899845678-3fad6a4a1846?w=600&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1515965230482-0b9b46fbee14?w=600&h=600&fit=crop"
+    ],
+    "style": ["casual"],
+    "context": ["diario", "viajes"],
+    "features": [
+      { "icon": "eco", "title": "Artesanal", "description": "Yute trenzado a mano en Valencia." },
+      { "icon": "spa", "title": "Transpirable", "description": "Cuero y lino natural." },
+      { "icon": "straighten", "title": "Ligera", "description": "Peso pluma para el verano." }
+    ],
+    "technicalSheet": {
+      "capellada": "Cuero y lino natural con acabado suave.",
+      "suela": "Yute trenzado a mano con refuerzo de caucho.",
+      "construccion": "Cosido tradicional artesanal valenciano."
+    },
+    "sizes": [35, 36, 37, 38, 39, 40, 41],
+    "colors": ["#F5E6D3", "#1B2631", "#8B7355"],
+    "quote": null,
+    "reviews": [
+      { "user": "Carla N.", "rating": 5, "text": "El yute trenzado a mano es precioso. Se nota la artesanía valenciana.", "tag": "material" },
+      { "user": "Sandra L.", "rating": 5, "text": "Las combiné con vestido blanco de lino. El look perfecto de verano.", "tag": "combinación" },
+      { "user": "Ángela Q.", "rating": 4, "text": "Ligeras y transpirables. Ideales para destinos de playa.", "tag": "comodidad" }
+    ]
+  },
+  {
+    "id": "notte-pump",
+    "name": "Notte Pump",
+    "category": "formal",
+    "description": "Salón clásico con tacón block de 7cm, el compañero perfecto para eventos especiales y jornadas de oficina.",
+    "price": 245.00,
+    "originalPrice": null,
+    "currency": "€",
+    "badge": null,
+    "image": "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?w=600&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?w=600&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1596703263926-eb0762ee17e4?w=600&h=600&fit=crop"
+    ],
+    "style": ["formal"],
+    "context": ["oficina", "eventos"],
+    "features": [
+      { "icon": "workspace_premium", "title": "Elegancia", "description": "Diseño atemporal y sofisticado." },
+      { "icon": "spa", "title": "Confort", "description": "Plantilla anatómica acolchada." },
+      { "icon": "straighten", "title": "Tacón Block 7cm", "description": "Estabilidad y altura perfecta." }
+    ],
+    "technicalSheet": {
+      "capellada": "Cuero napa italiano de primera calidad.",
+      "suela": "Cuero con antideslizante de caucho.",
+      "construccion": "Montaje clásico con refuerzo interior."
+    },
+    "sizes": [35, 36, 37, 38, 39, 40, 41],
+    "colors": ["#1B2631", "#baaee7", "#6B2D2D"],
+    "quote": null,
+    "reviews": [
+      { "user": "Adriana Z.", "rating": 5, "text": "El tacón block da mucha estabilidad. Puedes bailar toda la noche sin problema.", "tag": "comodidad" },
+      { "user": "Daniela I.", "rating": 5, "text": "El color lila es precioso. Los combiné con traje negro y fueron un éxito.", "tag": "combinación" },
+      { "user": "Verónica U.", "rating": 5, "text": "Envío impecable en 24h. El zapato es exactamente lo que esperaba.", "tag": "envío" }
+    ]
+  },
+  {
+    "id": "costa-moccasin",
+    "name": "Costa Moccasin",
+    "category": "casual",
+    "description": "Mocasín driving de cuero suave con suelo flexible, ideal para paseos y momentos de relax.",
+    "price": 155.00,
+    "originalPrice": null,
+    "currency": "€",
+    "badge": null,
+    "image": "https://images.unsplash.com/photo-1582897085656-c636d006a246?w=600&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1582897085656-c636d006a246?w=600&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=600&h=600&fit=crop"
+    ],
+    "style": ["casual"],
+    "context": ["diario", "viajes"],
+    "features": [
+      { "icon": "spa", "title": "Ultra-suave", "description": "Cuero napa sin forro." },
+      { "icon": "eco", "title": "Artesanal", "description": "Cosido a mano tradicional." },
+      { "icon": "straighten", "title": "Flexible", "description": "Suela driving con nubs de caucho." }
+    ],
+    "technicalSheet": {
+      "capellada": "Cuero napa de curtición vegetal.",
+      "suela": "Caucho con nubs driving pattern.",
+      "construccion": "Cosido a mano tipo mocasín true."
+    },
+    "sizes": [35, 36, 37, 38, 39, 40, 41],
+    "colors": ["#DEB887", "#4A3728", "#1B2631"],
+    "quote": null,
+    "reviews": [
+      { "user": "Blanca F.", "rating": 5, "text": "El cuero napa es una delicia. Suaves como un guante desde el primer día.", "tag": "material" },
+      { "user": "Esther G.", "rating": 4, "text": "Perfectos para conducir y pasear. La suela driving es muy cómoda.", "tag": "comodidad" },
+      { "user": "Olivia M.", "rating": 5, "text": "Los combiné con pantalón tobillero y camisa de lino. Look perfecto de entretiempo.", "tag": "combinación" }
+    ]
+  }
+]

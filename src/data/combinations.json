@@ -1,0 +1,47 @@
+[
+  {
+    "id": "combo-1",
+    "title": "Contraste Clásico",
+    "description": "Este calzado de piel combina con tu blazer azul marino. El tono chocolate aporta calidez y autoridad a tu look ejecutivo.",
+    "outfitImage": "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=400&h=500&fit=crop",
+    "shoeId": "oxford-elena",
+    "tag": "Consejo de Expertos",
+    "occasion": "oficina"
+  },
+  {
+    "id": "combo-2",
+    "title": "Casual Elevado",
+    "description": "Combina tus vaqueros con estas Chelsea boots. La textura de cuero suaviza el conjunto para una salida relajada pero sofisticada.",
+    "outfitImage": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=500&fit=crop",
+    "shoeId": "chelsea-amelia",
+    "tag": "Look de fin de semana",
+    "occasion": "eventos"
+  },
+  {
+    "id": "combo-3",
+    "title": "Urbano Relajado",
+    "description": "Los sneakers blancos elevan al instante cualquier outfit casual. Combínalos con pantalones chinos y una blusa de lino.",
+    "outfitImage": "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&h=500&fit=crop",
+    "shoeId": "heritage-low-top",
+    "tag": "Recomendado",
+    "occasion": "diario"
+  },
+  {
+    "id": "combo-4",
+    "title": "Brisa Mediterránea",
+    "description": "Las alpargatas combinan perfecto con vestidos de verano. Ideal para un día de paseo con estilo.",
+    "outfitImage": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=400&h=500&fit=crop",
+    "shoeId": "riviera-espadrille",
+    "tag": "Match perfecto",
+    "occasion": "diario"
+  },
+  {
+    "id": "combo-5",
+    "title": "Elegancia Discreta",
+    "description": "Los loafers son el complemento perfecto para un look business casual. Sin cordones, máxima sofisticación.",
+    "outfitImage": "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=500&fit=crop",
+    "shoeId": "milano-loafer",
+    "tag": "Sugerencia Pro",
+    "occasion": "oficina"
+  }
+]
