@@ -42,6 +42,18 @@ const hasData = computed(() =>
       <p class="text-sm text-on-surface-variant font-body mt-1 leading-relaxed">
         Elegida especialmente para ti según tus gustos, favoritos y estilo de vida.
       </p>
+
+      <div class="mt-4 p-4 rounded-2xl gradient-primary-soft">
+        <div class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-primary text-[22px] flex-none mt-0.5">auto_awesome</span>
+          <div>
+            <p class="font-headline font-bold text-sm text-on-surface mb-1">Mejora tus sugerencias</p>
+            <p class="text-xs text-on-surface-variant font-body leading-relaxed">
+              Sube fotos de tus outfits al armario, marca favoritos y completa tu perfil para obtener recomendaciones cada vez más precisas.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Profile summary chips -->
@@ -104,20 +116,5 @@ const hasData = computed(() =>
         />
       </div>
     </section>
-
-    <!-- Tip -->
-    <div class="px-5">
-      <div class="p-5 rounded-2xl gradient-primary-soft">
-        <div class="flex items-start gap-3">
-          <span class="material-symbols-outlined text-primary text-[24px] flex-none mt-0.5">auto_awesome</span>
-          <div>
-            <h3 class="font-headline font-bold text-sm text-on-surface mb-1">Mejora tus sugerencias</h3>
-            <p class="text-xs text-on-surface-variant font-body leading-relaxed">
-              Sube fotos de tus outfits al armario, marca favoritos y completa tu perfil para obtener recomendaciones cada vez más precisas.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>

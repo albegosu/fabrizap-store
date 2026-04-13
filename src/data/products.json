@@ -574,5 +574,40 @@
       { "user": "Esther G.", "rating": 4, "text": "Perfectos para conducir y pasear. La suela driving es muy cómoda.", "tag": "comodidad" },
       { "user": "Olivia M.", "rating": 5, "text": "Los combiné con pantalón tobillero y camisa de lino. Look perfecto de entretiempo.", "tag": "combinación" }
     ]
+  },
+  {
+    "id": "arena-flow",
+    "name": "Arena Flow",
+    "category": "sneakers",
+    "description": "Runner urbano en tonos arena con mezcla de ante y textil, suela de espuma y goma para tracción diaria o sesiones ligeras.",
+    "price": 139.00,
+    "originalPrice": null,
+    "currency": "€",
+    "badge": "Nuevo",
+    "image": "/images/zapatilla-beige.jpg",
+    "images": [
+      "/images/zapatilla-beige.jpg"
+    ],
+    "style": ["sporty", "casual"],
+    "context": ["diario", "viajes"],
+    "shoeFeatures": ["comodo", "con-cordon", "ligero", "transpirable", "suela-plana"],
+    "features": [
+      { "icon": "sprint", "title": "Amortiguación", "description": "Media suela de espuma de doble densidad para confort prolongado." },
+      { "icon": "air", "title": "Upper mix", "description": "Paneles en ante y textil técnico con acolchado en tobillo." },
+      { "icon": "straighten", "title": "Tracción", "description": "Suela de caucho con diseño dentado para calzada estable." }
+    ],
+    "technicalSheet": {
+      "capellada": "Ante y malla técnica con refuerzos termosellados.",
+      "suela": "EVA expandida con capa exterior de caucho natural.",
+      "construccion": "Montaje strobel con plantilla extraíble de espuma viscoelástica."
+    },
+    "sizes": [35, 36, 37, 38, 39, 40, 41],
+    "colors": ["#C4B8A8", "#E8E0D5", "#F5F0E8", "#1B2631"],
+    "quote": "Silueta limpia y neutra para combinar con todo; pensada para moverte sin renunciar al estilo.",
+    "reviews": [
+      { "user": "Lucía H.", "rating": 5, "text": "Ligerísimas y el color arena combina con cualquier outfit deportivo.", "tag": "comodidad" },
+      { "user": "Nerea T.", "rating": 5, "text": "Las uso para caminar y el agarre en asfalto se nota. Sin marcas chillonas, me encanta.", "tag": "combinación" },
+      { "user": "Ainhoa R.", "rating": 4, "text": "Talla fiel. La plantilla se puede sacar y poner la mía ortopédica.", "tag": "talla" }
+    ]
   }
 ]

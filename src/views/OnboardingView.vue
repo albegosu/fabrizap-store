@@ -84,8 +84,8 @@ function skip() {
             <div class="relative w-full max-w-[300px] aspect-square">
               <div class="absolute inset-0 gradient-primary-soft rounded-3xl" />
               <img
-                src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&h=500&fit=crop"
-                alt="FabriZap Calzado"
+                src="https://images.unsplash.com/photo-1575131141058-dccffccceec9?w=500&h=500&fit=crop"
+                alt="Calzado elegante"
                 class="relative w-full h-full object-cover rounded-3xl shadow-ambient"
               />
               <div class="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl gradient-primary flex items-center justify-center shadow-primary-glow">
@@ -96,7 +96,7 @@ function skip() {
 
           <div class="mt-auto pt-8 space-y-3">
             <p class="text-center text-xs text-on-surface-variant font-label">
-              Personaliza tu experiencia en 2 minutos
+              Personaliza tu experiencia en 2 pasos
             </p>
             <button
               class="w-full h-14 rounded-full gradient-primary text-white font-headline font-bold text-base tracking-tight flex items-center justify-center gap-2 shadow-primary-glow active:scale-[0.98] transition-transform"
@@ -117,7 +117,7 @@ function skip() {
               Personaliza tu estilo
             </h1>
             <p class="text-on-surface-variant text-sm leading-relaxed">
-              Ayúdanos a entender tu ritmo de vida para curar tu galería personal.
+              Ayúdanos a entender tu ritmo de vida para personalizar tu galería.
             </p>
           </div>
 

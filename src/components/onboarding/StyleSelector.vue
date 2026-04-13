@@ -9,8 +9,9 @@ const emit = defineEmits(['update:modelValue'])
 const styles = categories.styles
 
 const styleImages = {
-  casual: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=300&fit=crop',
-  sporty: 'https://images.unsplash.com/photo-1554062614-6da4fa67725a?w=400&h=300&fit=crop',
+  casual:
+    'https://images.unsplash.com/photo-1534653299134-96a171b61581?w=400&h=300&fit=crop',
+  sporty: '/images/zapatilla-beige.jpg',
   formal: 'https://images.unsplash.com/photo-1596703263926-eb0762ee17e4?w=400&h=300&fit=crop',
 }
 
@@ -21,14 +22,14 @@ function select(id) {
 
 <template>
   <div class="space-y-3">
-    <label class="text-xs font-label font-bold tracking-[0.15em] text-primary uppercase ml-1">
+    <label class="text-xs font-label font-bold tracking-[0.15em] text-primary uppercase mb-2 ml-1">
       Tu estética preferida
     </label>
     <div class="grid grid-cols-2 gap-3">
       <button
         v-for="(style, idx) in styles"
         :key="style.id"
-        class="relative overflow-hidden rounded-2xl transition-all duration-300 active:scale-[0.97]"
+        class="relative overflow-hidden rounded-md transition-all duration-300 active:scale-[0.97]"
         :class="[
           props.modelValue === style.id
             ? 'ring-2 ring-primary shadow-primary-glow'

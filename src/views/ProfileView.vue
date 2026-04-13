@@ -65,6 +65,31 @@ function resetProfile() {
 }
 
 const capitalize = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : ''
+
+/** Demo: histórico de compras para presentación al cliente */
+const recentOrders = [
+  {
+    id: 'FZ-2026-0842',
+    date: '28 mar 2026',
+    summary: 'Heritage Low Top — Talla 39',
+    total: '89,90 €',
+    status: 'Entregado',
+  },
+  {
+    id: 'FZ-2026-0711',
+    date: '12 feb 2026',
+    summary: 'Urban Runner Pro + plantillas',
+    total: '124,50 €',
+    status: 'Entregado',
+  },
+  {
+    id: 'FZ-2025-1193',
+    date: '3 nov 2025',
+    summary: 'Classic Derby — Talla 39',
+    total: '112,00 €',
+    status: 'Entregado',
+  },
+]
 </script>
 
 <template>
@@ -224,6 +249,38 @@ const capitalize = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : ''
           </div>
         </div>
       </template>
+    </div>
+
+    <!-- Purchase history (demo) -->
+    <div class="rounded-2xl bg-surface-container-lowest shadow-ambient p-5 space-y-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl gradient-primary-soft flex items-center justify-center">
+          <span class="material-symbols-outlined text-primary text-[20px]">receipt_long</span>
+        </div>
+        <div>
+          <h3 class="text-[10px] font-label font-bold tracking-[0.15em] text-primary uppercase">Compras realizadas</h3>
+          <p class="text-xs text-on-surface-variant font-label mt-0.5">Tus últimos pedidos en FabriZap</p>
+        </div>
+      </div>
+      <ul class="space-y-3">
+        <li
+          v-for="order in recentOrders"
+          :key="order.id"
+          class="rounded-md bg-surface-container/80 border border-outline-variant/10 p-4"
+        >
+          <div class="flex items-start justify-between gap-3">
+            <div class="min-w-0">
+              <p class="text-[10px] font-label font-bold tracking-wider text-on-surface-variant uppercase">{{ order.id }}</p>
+              <p class="font-headline font-bold text-sm text-on-surface mt-1 truncate">{{ order.summary }}</p>
+              <p class="text-xs text-on-surface-variant font-label mt-1">{{ order.date }}</p>
+            </div>
+            <div class="text-right shrink-0">
+              <p class="font-headline font-bold text-sm text-on-surface">{{ order.total }}</p>
+              <p class="text-[10px] font-label font-semibold text-primary mt-1">{{ order.status }}</p>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
 
     <!-- Stats -->
