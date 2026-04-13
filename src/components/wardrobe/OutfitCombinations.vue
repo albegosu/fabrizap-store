@@ -25,30 +25,28 @@ function getShoe(shoeId) {
       <h3 class="text-xl font-headline font-extrabold tracking-tight text-on-surface">
         Combinaciones Sugeridas
       </h3>
-      <button class="text-xs font-label font-semibold text-primary">Ver todas</button>
+      <button class="text-xs font-mono font-bold text-primary border-b-2 border-primary">Ver todas</button>
     </div>
 
     <div class="space-y-4">
       <div
         v-for="combo in combos"
         :key="combo.id"
-        class="rounded-2xl bg-surface-container-lowest shadow-ambient p-4"
+        class="rounded-sm bg-surface-container-lowest border-brutal shadow-brutal p-4"
       >
         <div class="flex gap-3 mb-3">
-          <!-- Outfit photo -->
-          <div class="w-20 h-24 rounded-xl overflow-hidden bg-surface-container flex-none relative">
+          <div class="w-20 h-24 rounded-sm overflow-hidden bg-surface-container flex-none relative">
             <img
               :src="hasPics ? latestImage : combo.outfitImage"
               alt="Tu look"
               class="w-full h-full object-cover"
             />
-            <span class="absolute top-1 left-1 text-[8px] font-label font-bold text-white bg-on-surface/60 px-1.5 py-0.5 rounded uppercase">
+            <span class="absolute top-1 left-1 text-[8px] font-mono font-bold text-white bg-on-surface/60 px-1.5 py-0.5 rounded-sm uppercase border border-outline">
               Tu look
             </span>
           </div>
-          <!-- Recommended shoe -->
           <div
-            class="flex-1 rounded-xl overflow-hidden bg-surface-container relative cursor-pointer"
+            class="flex-1 rounded-sm overflow-hidden bg-surface-container relative cursor-pointer"
             @click="router.push(`/producto/${combo.shoeId}`)"
           >
             <img
@@ -56,7 +54,7 @@ function getShoe(shoeId) {
               :alt="getShoe(combo.shoeId)?.name"
               class="w-full h-full object-cover"
             />
-            <span class="absolute top-1 right-1 text-[8px] font-label font-bold text-white bg-primary/80 px-1.5 py-0.5 rounded uppercase">
+            <span class="absolute top-1 right-1 text-[8px] font-mono font-bold text-on-secondary bg-secondary/80 px-1.5 py-0.5 rounded-sm uppercase border border-outline">
               {{ combo.tag }}
             </span>
           </div>
@@ -66,7 +64,7 @@ function getShoe(shoeId) {
           {{ combo.description }}
         </p>
         <button
-          class="mt-3 w-full py-2.5 rounded-full bg-surface-container text-on-surface font-label font-semibold text-sm hover:bg-surface-container-high transition-colors active:scale-[0.98]"
+          class="mt-3 w-full py-2.5 rounded-sm border-brutal bg-surface text-on-surface font-mono font-semibold text-sm uppercase tracking-wider hover:bg-surface-container-high transition-colors active:translate-y-[1px]"
           @click="router.push(`/producto/${combo.shoeId}`)"
         >
           Ver Detalles del Zapato

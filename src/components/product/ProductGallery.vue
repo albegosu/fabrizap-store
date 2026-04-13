@@ -11,7 +11,7 @@ const activeIndex = ref(0)
 
 <template>
   <div class="relative">
-    <div class="aspect-[4/3] bg-surface-container overflow-hidden">
+    <div class="aspect-[4/3] bg-surface-container overflow-hidden border-b-3 border-outline">
       <img
         :src="images[activeIndex]"
         :alt="`Product image ${activeIndex + 1}`"
@@ -20,7 +20,7 @@ const activeIndex = ref(0)
     </div>
     <span
       v-if="badge"
-      class="absolute top-4 right-4 px-4 py-1.5 rounded-full bg-on-surface text-surface text-xs font-label font-bold tracking-wide uppercase"
+      class="absolute top-4 right-[7.5rem] z-20 px-4 py-1.5 rounded-sm bg-secondary-flat text-on-secondary text-xs font-mono font-bold tracking-wide uppercase sticker"
     >
       {{ badge }}
     </span>
@@ -28,8 +28,8 @@ const activeIndex = ref(0)
       <button
         v-for="(_, idx) in images"
         :key="idx"
-        class="w-2 h-2 rounded-full transition-all"
-        :class="idx === activeIndex ? 'bg-primary w-6' : 'bg-on-surface/30'"
+        class="h-2 rounded-none transition-all"
+        :class="idx === activeIndex ? 'bg-primary w-6' : 'bg-on-surface/30 w-2'"
         @click="activeIndex = idx"
       />
     </div>

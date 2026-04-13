@@ -22,10 +22,10 @@ function toggle(id) {
       <button
         v-for="occ in occasions"
         :key="occ.id"
-        class="flex items-center gap-1.5 px-4 py-2.5 rounded-full font-label font-semibold text-sm transition-all active:scale-95"
+        class="flex items-center gap-1.5 px-4 py-2.5 rounded-sm font-mono font-semibold text-sm transition-all active:translate-y-[1px] active:shadow-none"
         :class="active === occ.id
-          ? 'gradient-primary text-white shadow-primary-glow'
-          : 'bg-surface-container text-on-surface-variant hover:bg-surface-container-high'"
+          ? 'bg-primary-flat text-on-primary border-brutal shadow-brutal-sm'
+          : 'bg-surface border-brutal text-on-surface-variant hover:bg-surface-container-high'"
         @click="toggle(occ.id)"
       >
         <span class="material-symbols-outlined text-[16px]">{{ occ.icon }}</span>

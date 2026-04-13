@@ -8,11 +8,15 @@ export function useRecommendations() {
 
   function calculateMatch(product) {
     let score = 50
-    const userStyle = userStore.stylePreference
+    const userStyles = userStore.stylePreference
     const userContexts = userStore.contexts
     const userShoeFeatures = userStore.shoeFeatures
 
-    if (userStyle && product.style.includes(userStyle)) {
+    if (
+      Array.isArray(userStyles) &&
+      userStyles.length > 0 &&
+      userStyles.some((s) => product.style.includes(s))
+    ) {
       score += 20
     }
 

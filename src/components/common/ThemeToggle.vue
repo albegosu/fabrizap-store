@@ -9,7 +9,7 @@ const { isDark } = storeToRefs(themeStore)
 <template>
   <button
     type="button"
-    class="h-10 w-10 shrink-0 inline-flex items-center justify-center rounded-full hover:bg-surface-container-high/60 transition-colors text-on-surface-variant"
+    class="h-10 w-10 shrink-0 inline-flex items-center justify-center rounded-sm border-brutal hover:bg-surface-container-high transition-colors text-on-surface-variant"
     :aria-label="isDark ? 'Activar modo claro' : 'Activar modo oscuro'"
     :aria-pressed="isDark"
     @click="themeStore.toggle()"

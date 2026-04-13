@@ -24,7 +24,7 @@ function navigate(tab) {
 
 <template>
   <nav
-    class="app-bottom-nav fixed bottom-0 left-1/2 -translate-x-1/2 w-full app-max-width z-50 bg-surface border-t border-outline-variant/10"
+    class="app-bottom-nav fixed bottom-0 left-1/2 -translate-x-1/2 w-full app-max-width z-50 bg-surface border-t-3 border-outline"
   >
     <div class="flex justify-around items-end px-1 pb-5 pt-1.5 relative">
       <template v-for="tab in tabs" :key="tab.name">
@@ -35,10 +35,10 @@ function navigate(tab) {
           @click="navigate(tab)"
         >
           <div
-            class="w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all active:scale-90"
+            class="w-14 h-14 rounded-sm flex items-center justify-center transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
             :class="activeTab === tab.name
-              ? 'gradient-primary shadow-primary-glow'
-              : 'bg-surface-container-lowest shadow-ambient ring-1 ring-outline-variant/15'"
+              ? 'bg-primary-flat border-brutal-thick shadow-brutal-primary text-white'
+              : 'bg-surface-container-lowest border-brutal'"
           >
             <img
               src="/shoe-logo.png"
@@ -52,7 +52,7 @@ function navigate(tab) {
             />
           </div>
           <span
-            class="text-[9px] font-label font-bold tracking-wider uppercase mt-1 transition-colors"
+            class="text-[9px] font-mono font-bold tracking-wider uppercase mt-1 transition-colors"
             :class="activeTab === tab.name ? 'text-primary' : 'text-on-surface-variant/50'"
           >{{ tab.label }}</span>
         </button>
@@ -60,7 +60,7 @@ function navigate(tab) {
         <!-- Regular tab -->
         <button
           v-else
-          class="flex flex-col items-center justify-center gap-0.5 py-1.5 rounded-2xl transition-all min-w-[56px]"
+          class="flex flex-col items-center justify-center gap-0.5 py-1.5 rounded-sm transition-all min-w-[56px]"
           :class="activeTab === tab.name
             ? 'text-primary'
             : 'text-on-surface-variant/50 hover:text-on-surface-variant'"
@@ -70,7 +70,7 @@ function navigate(tab) {
             class="material-symbols-outlined text-[22px] transition-all"
             :style="activeTab === tab.name ? 'font-variation-settings: \'FILL\' 1' : ''"
           >{{ tab.icon }}</span>
-          <span class="text-[9px] font-label font-bold tracking-wider uppercase">{{ tab.label }}</span>
+          <span class="text-[9px] font-mono font-bold tracking-wider uppercase">{{ tab.label }}</span>
         </button>
       </template>
     </div>
