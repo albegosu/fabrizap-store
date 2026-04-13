@@ -42,20 +42,20 @@ function processFile(file) {
       </p>
     </div>
     <button
-      class="w-full p-8 rounded-2xl border-2 border-dashed transition-all flex flex-col items-center gap-3 cursor-pointer active:scale-[0.98]"
+      class="w-full p-8 rounded-sm border-brutal-thick border-dashed transition-all flex flex-col items-center gap-3 cursor-pointer active:translate-y-[1px]"
       :class="isDragging
-        ? 'border-primary bg-primary/5'
-        : 'border-outline-variant/30 bg-surface-container hover:border-primary/50 hover:bg-surface-container-high'"
+        ? 'border-primary bg-primary-soft shadow-brutal-primary'
+        : 'bg-surface-container hover:border-primary hover:bg-surface-container-high'"
       @click="triggerUpload"
       @dragover.prevent="isDragging = true"
       @dragleave="isDragging = false"
       @drop.prevent="handleDrop"
     >
-      <div class="w-16 h-16 rounded-2xl gradient-primary-soft flex items-center justify-center">
+      <div class="w-16 h-16 rounded-sm bg-primary-soft border-brutal flex items-center justify-center">
         <span class="material-symbols-outlined text-primary text-3xl">photo_camera</span>
       </div>
       <span class="font-headline font-bold text-sm text-on-surface">Subir Foto de Outfit</span>
-      <span class="text-[10px] font-label text-on-surface-variant uppercase tracking-wider">
+      <span class="text-[10px] font-mono text-on-surface-variant uppercase tracking-wider">
         JPG, PNG hasta 10MB
       </span>
     </button>

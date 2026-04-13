@@ -6,14 +6,14 @@ defineProps({
 
 <template>
   <section>
-    <h3 class="text-lg font-headline font-bold text-on-surface mb-4">Lo que te encantará</h3>
+    <h3 class="text-lg font-headline font-bold text-on-surface mb-4 underline decoration-secondary decoration-4 underline-offset-4">Lo que te encantará</h3>
     <div class="space-y-3">
       <div
         v-for="feature in features"
         :key="feature.title"
-        class="flex items-center gap-4 p-4 rounded-2xl bg-surface-container"
+        class="flex items-center gap-4 p-4 rounded-sm border-brutal bg-surface-container-lowest shadow-brutal-sm"
       >
-        <div class="w-11 h-11 rounded-xl gradient-primary-soft flex items-center justify-center flex-none">
+        <div class="w-11 h-11 rounded-sm bg-primary-soft border-brutal flex items-center justify-center flex-none">
           <span class="material-symbols-outlined text-primary text-[22px]">{{ feature.icon }}</span>
         </div>
         <div>

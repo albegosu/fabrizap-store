@@ -22,17 +22,17 @@ function toggle(id) {
 
 <template>
   <div class="space-y-3">
-    <label class="text-xs font-label font-bold tracking-[0.15em] text-primary uppercase ml-1">
+    <label class="text-xs font-mono font-bold tracking-[0.15em] text-primary uppercase ml-1">
       Características del Calzado
     </label>
     <div class="flex flex-wrap gap-3">
       <button
         v-for="feat in shoeFeatures"
         :key="feat.id"
-        class="flex items-center gap-2 px-5 py-3 rounded-full font-label font-semibold text-sm transition-all duration-200 active:scale-95"
+        class="flex items-center gap-2 px-5 py-3 rounded-sm font-label font-semibold text-sm transition-all duration-200 active:translate-y-[1px] active:shadow-none"
         :class="props.modelValue.includes(feat.id)
-          ? 'gradient-primary text-white shadow-primary-glow'
-          : 'bg-surface-container text-on-surface-variant hover:bg-surface-container-high'"
+          ? 'bg-primary-flat text-on-primary border-brutal shadow-brutal-sm'
+          : 'bg-surface border-brutal text-on-surface-variant hover:bg-surface-container-high'"
         @click="toggle(feat.id)"
       >
         <span class="material-symbols-outlined text-[18px]">{{ feat.icon }}</span>

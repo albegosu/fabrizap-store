@@ -17,20 +17,20 @@ function toggle(e) {
 
 <template>
   <button
-    class="rounded-full flex items-center justify-center transition-all active:scale-90"
-    :class="size === 'lg'
-      ? 'w-11 h-11'
-      : 'w-9 h-9'"
-    :style="{
-      backgroundColor: catalogStore.isFavorite(productId) ? 'rgba(186,174,231,0.15)' : 'rgba(244,241,238,0.8)',
-    }"
+    class="rounded-sm border-brutal flex items-center justify-center transition-all active:translate-x-[1px] active:translate-y-[1px] active:shadow-none"
+    :class="[
+      size === 'lg' ? 'w-11 h-11' : 'w-9 h-9',
+      catalogStore.isFavorite(productId)
+        ? 'bg-primary/10 shadow-brutal-sm'
+        : 'bg-surface-container-lowest'
+    ]"
     @click="toggle"
   >
     <span
       class="material-symbols-outlined transition-colors"
       :class="size === 'lg' ? 'text-[22px]' : 'text-[20px]'"
       :style="{
-        color: catalogStore.isFavorite(productId) ? '#b98bf8' : '#948DA2',
+        color: catalogStore.isFavorite(productId) ? 'var(--color-primary)' : 'var(--color-on-surface-variant)',
         fontVariationSettings: catalogStore.isFavorite(productId) ? '\'FILL\' 1' : '\'FILL\' 0',
       }"
     >favorite</span>

@@ -28,10 +28,10 @@ function formatDate(dateStr) {
 <template>
   <section v-if="wardrobeStore.combinationHistory.length" class="px-5">
     <div class="flex items-baseline justify-between mb-4">
-      <h3 class="text-xl font-headline font-extrabold tracking-tight text-on-surface">
+      <h3 class="text-xl font-headline font-extrabold tracking-tight text-on-surface underline decoration-primary decoration-4 underline-offset-4">
         Histórico de combinaciones
       </h3>
-      <span class="text-[10px] font-label font-bold tracking-[0.1em] text-primary uppercase">
+      <span class="text-[10px] font-mono font-bold tracking-[0.1em] text-primary uppercase">
         {{ wardrobeStore.combinationHistory.length }} looks
       </span>
     </div>
@@ -40,24 +40,22 @@ function formatDate(dateStr) {
       <div
         v-for="entry in wardrobeStore.combinationHistory"
         :key="entry.id"
-        class="rounded-2xl bg-surface-container-lowest shadow-ambient overflow-hidden"
+        class="rounded-sm bg-surface-container-lowest border-brutal shadow-brutal overflow-hidden"
       >
         <div class="flex">
-          <!-- Outfit image -->
           <div class="w-24 h-28 flex-none relative">
             <img
               :src="entry.outfitImage"
               alt="Outfit"
               class="w-full h-full object-cover"
             />
-            <span class="absolute bottom-1 left-1 text-[7px] font-label font-bold text-white bg-on-surface/50 px-1.5 py-0.5 rounded uppercase">
+            <span class="absolute bottom-1 left-1 text-[7px] font-mono font-bold text-white bg-on-surface/60 px-1.5 py-0.5 rounded-sm uppercase border border-outline">
               Outfit
             </span>
           </div>
 
-          <!-- Shoe image -->
           <div
-            class="w-24 h-28 flex-none relative cursor-pointer"
+            class="w-24 h-28 flex-none relative cursor-pointer border-l-2 border-outline"
             @click="router.push(`/producto/${entry.shoeId}`)"
           >
             <img
@@ -65,12 +63,11 @@ function formatDate(dateStr) {
               :alt="getShoe(entry.shoeId)?.name"
               class="w-full h-full object-cover"
             />
-            <span class="absolute bottom-1 left-1 text-[7px] font-label font-bold text-white bg-primary/70 px-1.5 py-0.5 rounded uppercase">
+            <span class="absolute bottom-1 left-1 text-[7px] font-mono font-bold text-on-secondary bg-secondary/70 px-1.5 py-0.5 rounded-sm uppercase border border-outline">
               Zapato
             </span>
           </div>
 
-          <!-- Info -->
           <div class="flex-1 p-3 flex flex-col justify-between min-w-0">
             <div>
               <h4 class="font-headline font-bold text-sm text-on-surface leading-tight truncate">
@@ -84,15 +81,15 @@ function formatDate(dateStr) {
               <div class="flex items-center gap-1.5">
                 <span
                   v-if="entry.occasion"
-                  class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-surface-container text-[9px] font-label font-semibold text-on-surface-variant uppercase tracking-wide"
+                  class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-sm border border-outline bg-surface text-[9px] font-mono font-semibold text-on-surface-variant uppercase tracking-wide"
                 >
                   <span class="material-symbols-outlined text-[10px]">{{ occasionIcons[entry.occasion] || 'event' }}</span>
                   {{ entry.occasion }}
                 </span>
-                <span class="text-[9px] font-label text-on-surface-variant/60">{{ formatDate(entry.date) }}</span>
+                <span class="text-[9px] font-mono text-on-surface-variant/60">{{ formatDate(entry.date) }}</span>
               </div>
               <button
-                class="w-7 h-7 rounded-full flex items-center justify-center transition-colors"
+                class="w-7 h-7 rounded-sm flex items-center justify-center transition-colors"
                 :class="entry.liked ? 'text-primary' : 'text-on-surface-variant/40 hover:text-primary/60'"
                 @click="wardrobeStore.toggleHistoryLike(entry.id)"
               >

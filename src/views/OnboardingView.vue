@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { FABRIZAP_LOGO_URL } from '@/constants/brand'
 import { useUserStore } from '@/stores/userStore'
+import categories from '@/data/categories.json'
 import ProgressBar from '@/components/onboarding/ProgressBar.vue'
 import StyleSelector from '@/components/onboarding/StyleSelector.vue'
 import ContextChips from '@/components/onboarding/ContextChips.vue'
@@ -13,7 +14,15 @@ const router = useRouter()
 const userStore = useUserStore()
 
 const step = ref(1)
-const selectedStyle = ref(userStore.stylePreference || '')
+function normalizeSelectedStyles(pref) {
+  if (Array.isArray(pref)) return [...pref]
+  if (typeof pref === 'string' && pref) return [pref]
+  return []
+}
+
+const selectedStyles = ref(normalizeSelectedStyles(userStore.stylePreference))
+
+const styleById = Object.fromEntries(categories.styles.map((s) => [s.id, s]))
 const selectedContexts = ref([...userStore.contexts])
 const selectedShoeFeatures = ref([...userStore.shoeFeatures])
 
@@ -30,7 +39,7 @@ function prevStep() {
 }
 
 function finish() {
-  userStore.setStylePreference(selectedStyle.value)
+  userStore.setStylePreference(selectedStyles.value)
   userStore.setContexts(selectedContexts.value)
   userStore.setShoeFeatures(selectedShoeFeatures.value)
   userStore.completeOnboarding()
@@ -50,10 +59,10 @@ function skip() {
       <div class="flex items-center min-w-0">
         <img :src="FABRIZAP_LOGO_URL" alt="FabriZap" class="h-9 w-auto" />
       </div>
-      <div class="flex items-center gap-0.5 shrink-0">
+      <div class="flex items-center gap-1 shrink-0">
         <ThemeToggle />
         <button
-          class="text-sm font-label font-semibold text-on-surface-variant hover:text-primary transition-colors px-2 py-2"
+          class="text-sm font-mono font-bold text-on-surface-variant border-brutal rounded-sm px-3 py-1.5 hover:bg-surface-container-high transition-colors"
           @click="skip"
         >
           SKIP
@@ -73,7 +82,7 @@ function skip() {
           <div class="mb-8">
             <h1 class="text-4xl font-headline font-extrabold leading-tight tracking-tight text-on-surface mb-3">
               Bienvenida a<br />
-              <span class="text-gradient-primary">FabriZap</span>
+              <span class="text-primary">FabriZap</span>
             </h1>
             <p class="text-on-surface-variant text-base leading-relaxed max-w-[320px]">
               Tu asesor de calzado personal. Te ayudamos a encontrar el zapato perfecto para cada ocasión.
@@ -82,24 +91,23 @@ function skip() {
 
           <div class="flex-1 flex items-center justify-center">
             <div class="relative w-full max-w-[300px] aspect-square">
-              <div class="absolute inset-0 gradient-primary-soft rounded-3xl" />
               <img
                 src="https://images.unsplash.com/photo-1575131141058-dccffccceec9?w=500&h=500&fit=crop"
                 alt="Calzado elegante"
-                class="relative w-full h-full object-cover rounded-3xl shadow-ambient"
+                class="relative w-full h-full object-cover rounded-sm border-brutal-thick shadow-brutal-lg"
               />
-              <div class="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl gradient-primary flex items-center justify-center shadow-primary-glow">
+              <div class="absolute -bottom-4 -right-4 w-24 h-24 rounded-sm bg-primary-flat border-brutal-thick shadow-brutal flex items-center justify-center">
                 <span class="material-symbols-outlined text-white text-4xl">auto_awesome</span>
               </div>
             </div>
           </div>
 
           <div class="mt-auto pt-8 space-y-3">
-            <p class="text-center text-xs text-on-surface-variant font-label">
+            <p class="text-center text-xs text-on-surface-variant font-mono">
               Personaliza tu experiencia en 2 pasos
             </p>
             <button
-              class="w-full h-14 rounded-full gradient-primary text-white font-headline font-bold text-base tracking-tight flex items-center justify-center gap-2 shadow-primary-glow active:scale-[0.98] transition-transform"
+              class="w-full h-14 rounded-sm bg-primary-flat text-on-primary border-brutal-thick shadow-brutal font-headline font-bold text-base uppercase tracking-wider flex items-center justify-center gap-2 active:translate-y-[2px] active:shadow-none transition-all"
               @click="nextStep"
             >
               Empezar
@@ -122,20 +130,20 @@ function skip() {
           </div>
 
           <div class="space-y-8 flex-1 overflow-y-auto">
-            <StyleSelector v-model="selectedStyle" />
+            <StyleSelector v-model="selectedStyles" />
             <ContextChips v-model="selectedContexts" />
             <ShoeFeatureChips v-model="selectedShoeFeatures" />
           </div>
 
           <div class="mt-auto pt-8 flex items-center gap-4">
             <button
-              class="text-sm font-label font-semibold text-on-surface-variant hover:text-primary transition-colors"
+              class="text-sm font-mono font-semibold text-on-surface-variant border-b-2 border-outline hover:text-primary transition-colors"
               @click="prevStep"
             >
               Volver
             </button>
             <button
-              class="flex-1 h-14 rounded-full gradient-primary text-white font-headline font-bold text-base tracking-tight flex items-center justify-center gap-2 shadow-primary-glow active:scale-[0.98] transition-transform"
+              class="flex-1 h-14 rounded-sm bg-primary-flat text-on-primary border-brutal-thick shadow-brutal font-headline font-bold text-base uppercase tracking-wider flex items-center justify-center gap-2 active:translate-y-[2px] active:shadow-none transition-all"
               @click="nextStep"
             >
               Siguiente
@@ -158,20 +166,26 @@ function skip() {
           </div>
 
           <div class="flex-1 flex flex-col items-center justify-center gap-6">
-            <div class="w-24 h-24 rounded-full gradient-primary flex items-center justify-center shadow-primary-glow">
+            <div class="w-24 h-24 rounded-sm bg-primary-flat border-brutal-thick shadow-brutal-lg flex items-center justify-center">
               <span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1">check_circle</span>
             </div>
 
             <div class="text-center space-y-4">
-              <div v-if="selectedStyle" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/10 text-primary font-label font-semibold text-sm">
-                <span class="material-symbols-outlined text-[18px]">apparel</span>
-                Estilo: {{ selectedStyle.charAt(0).toUpperCase() + selectedStyle.slice(1) }}
+              <div v-if="selectedStyles.length" class="flex flex-wrap justify-center gap-2">
+                <span
+                  v-for="sid in selectedStyles"
+                  :key="sid"
+                  class="inline-flex items-center gap-2 px-5 py-2.5 rounded-sm border border-outline bg-primary-soft text-primary font-label font-semibold text-sm"
+                >
+                  <span class="material-symbols-outlined text-[18px]">{{ styleById[sid]?.icon ?? 'apparel' }}</span>
+                  {{ styleById[sid]?.label ?? sid }}
+                </span>
               </div>
               <div v-if="selectedContexts.length" class="flex flex-wrap justify-center gap-2">
                 <span
                   v-for="ctx in selectedContexts"
                   :key="ctx"
-                  class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-label text-xs font-semibold"
+                  class="px-4 py-2 rounded-sm border border-outline bg-surface text-on-surface-variant font-label text-xs font-semibold"
                 >
                   {{ ctx.charAt(0).toUpperCase() + ctx.slice(1) }}
                 </span>
@@ -180,7 +194,7 @@ function skip() {
                 <span
                   v-for="feat in selectedShoeFeatures"
                   :key="feat"
-                  class="px-4 py-2 rounded-full bg-primary/10 text-primary font-label text-xs font-semibold"
+                  class="px-4 py-2 rounded-sm border border-outline bg-primary-soft text-primary font-label text-xs font-semibold"
                 >
                   {{ feat.charAt(0).toUpperCase() + feat.slice(1).replace('-', ' ') }}
                 </span>
@@ -190,14 +204,14 @@ function skip() {
 
           <div class="mt-auto pt-8 space-y-3">
             <button
-              class="w-full h-14 rounded-full gradient-primary text-white font-headline font-bold text-base tracking-tight flex items-center justify-center gap-2 shadow-primary-glow active:scale-[0.98] transition-transform"
+              class="w-full h-14 rounded-sm bg-primary-flat text-on-primary border-brutal-thick shadow-brutal font-headline font-bold text-base uppercase tracking-wider flex items-center justify-center gap-2 active:translate-y-[2px] active:shadow-none transition-all"
               @click="finish"
             >
               Continuar a Editorial
               <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
             </button>
             <button
-              class="w-full py-3 text-sm font-label font-semibold text-on-surface-variant hover:text-primary transition-colors text-center"
+              class="w-full py-3 text-sm font-mono font-semibold text-on-surface-variant border-b-2 border-outline hover:text-primary transition-colors text-center"
               @click="prevStep"
             >
               Volver a editar

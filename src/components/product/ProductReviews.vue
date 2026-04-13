@@ -22,18 +22,18 @@ const tagIcons = {
 
 <template>
   <section v-if="reviews.length">
-    <h3 class="text-lg font-headline font-bold text-on-surface mb-4">
+    <h3 class="text-lg font-headline font-bold text-on-surface mb-4 underline decoration-primary decoration-4 underline-offset-4">
       Opiniones
     </h3>
     <div class="space-y-3">
       <div
         v-for="(review, idx) in reviews"
         :key="idx"
-        class="rounded-2xl bg-surface-container-lowest shadow-ambient p-4 space-y-2.5"
+        class="rounded-sm bg-surface-container-lowest border-brutal shadow-brutal p-4 space-y-2.5"
       >
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-2">
-            <div class="w-8 h-8 rounded-full gradient-primary-soft flex items-center justify-center">
+            <div class="w-8 h-8 rounded-sm bg-primary-soft border-brutal flex items-center justify-center">
               <span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: 'FILL' 1">person</span>
             </div>
             <span class="font-label font-bold text-sm text-on-surface">{{ review.user }}</span>
@@ -53,7 +53,7 @@ const tagIcons = {
 
         <div v-if="review.tag" class="flex items-center gap-1.5">
           <span
-            class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary/8 text-primary text-[10px] font-label font-bold tracking-wider uppercase"
+            class="inline-flex items-center gap-1 px-2.5 py-1 rounded-sm bg-secondary-flat text-on-secondary text-[10px] font-mono font-bold tracking-wider uppercase sticker-alt"
           >
             <span class="material-symbols-outlined text-[12px]">{{ tagIcons[review.tag] || 'check_circle' }}</span>
             {{ tagLabels[review.tag] || review.tag }}

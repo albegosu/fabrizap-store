@@ -40,14 +40,14 @@ function goToCart() {
         :class="hasBottomNav ? 'pb-24' : 'pb-28'"
       >
         <button
-          class="app-floating-cart pointer-events-auto relative w-14 h-14 rounded-full gradient-primary shadow-primary-glow flex items-center justify-center shrink-0 transition-transform active:scale-90 cursor-pointer"
+          class="app-floating-cart pointer-events-auto relative w-14 h-14 rounded-sm bg-primary-flat border-brutal-thick shadow-brutal flex items-center justify-center shrink-0 transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none cursor-pointer"
           :class="bump ? 'animate-bump' : ''"
           aria-label="Ver carrito"
           @click="goToCart"
         >
           <span class="material-symbols-outlined text-white text-[24px]">shopping_bag</span>
           <span
-            class="absolute -top-1 -right-1 min-w-[22px] h-[22px] px-1 rounded-full bg-red-500 text-white text-[11px] font-bold flex items-center justify-center ring-2 ring-surface"
+            class="absolute -top-2 -right-2 min-w-[22px] h-[22px] px-1 rounded-sm bg-secondary-flat text-on-secondary text-[11px] font-mono font-bold flex items-center justify-center border border-outline"
           >{{ cartCount > 99 ? '99+' : cartCount }}</span>
         </button>
       </div>
@@ -56,7 +56,6 @@ function goToCart() {
 </template>
 
 <style scoped>
-/* La raíz animada es una franja full-bleed; evitamos scale para no “hinchar” todo el ancho. */
 .cart-fab-enter-active {
   animation: fab-in 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }

@@ -34,15 +34,15 @@ function getShoe(shoeId) {
         class="flex-none w-[140px] cursor-pointer group"
         @click="router.push(`/producto/${combo.shoeId}`)"
       >
-        <div class="aspect-square rounded-2xl overflow-hidden bg-surface-container mb-2">
+        <div class="aspect-square rounded-sm overflow-hidden bg-surface-container border-brutal mb-2">
           <img
             :src="combo.outfitImage"
             :alt="combo.title"
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            class="w-full h-full object-cover"
           />
         </div>
         <p class="text-xs font-label font-semibold text-on-surface truncate">{{ combo.title }}</p>
-        <p class="text-[10px] font-label text-on-surface-variant uppercase tracking-wide">
+        <p class="text-[10px] font-mono text-on-surface-variant uppercase tracking-wide">
           {{ getShoe(combo.shoeId)?.name || '' }}
         </p>
       </div>

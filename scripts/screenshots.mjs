@@ -62,7 +62,7 @@ async function seedScreenshotDemoState(page) {
   await page.evaluate(
     ({ favorites, cart }) => {
       localStorage.setItem('fz_onboarded', JSON.stringify(true))
-      localStorage.setItem('fz_style', JSON.stringify('casual'))
+      localStorage.setItem('fz_style', JSON.stringify(['casual']))
       localStorage.setItem('fz_contexts', JSON.stringify(['diario']))
       localStorage.setItem('fz_shoe_features', JSON.stringify(['impermeable', 'tacon']))
       localStorage.setItem('fz_favorites', JSON.stringify(favorites))

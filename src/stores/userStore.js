@@ -2,16 +2,17 @@ import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 
 export const useUserStore = defineStore('user', () => {
-  const stylePreference = ref(loadFromStorage('fz_style', ''))
+  const stylePreference = ref(normalizeStylePreference(loadFromStorage('fz_style', [])))
   const contexts = ref(loadFromStorage('fz_contexts', []))
   const shoeFeatures = ref(loadFromStorage('fz_shoe_features', []))
   const onboardingCompleted = ref(loadFromStorage('fz_onboarded', false))
 
   const hasCompletedOnboarding = computed(() => onboardingCompleted.value)
 
-  function setStylePreference(style) {
-    stylePreference.value = style
-    saveToStorage('fz_style', style)
+  function setStylePreference(styles) {
+    const next = Array.isArray(styles) ? [...styles] : normalizeStylePreference(styles)
+    stylePreference.value = next
+    saveToStorage('fz_style', next)
   }
 
   function toggleContext(ctx) {
@@ -50,7 +51,7 @@ export const useUserStore = defineStore('user', () => {
   }
 
   function resetOnboarding() {
-    stylePreference.value = ''
+    stylePreference.value = []
     contexts.value = []
     shoeFeatures.value = []
     onboardingCompleted.value = false
@@ -75,6 +76,16 @@ export const useUserStore = defineStore('user', () => {
     resetOnboarding,
   }
 })
+
+function normalizeStylePreference(raw) {
+  if (Array.isArray(raw)) {
+    return raw.filter((id) => typeof id === 'string' && id)
+  }
+  if (typeof raw === 'string' && raw) {
+    return [raw]
+  }
+  return []
+}
 
 function loadFromStorage(key, fallback) {
   try {

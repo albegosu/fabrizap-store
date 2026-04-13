@@ -23,7 +23,7 @@ const greeting = computed(() => {
 const topPicks = computed(() => recommendedProducts.value.slice(0, 8))
 
 const hasData = computed(() =>
-  userStore.stylePreference ||
+  userStore.stylePreference.length > 0 ||
   userStore.contexts.length > 0 ||
   userStore.shoeFeatures.length > 0 ||
   catalogStore.favorites.length > 0 ||
@@ -35,7 +35,7 @@ const hasData = computed(() =>
   <div class="py-5 space-y-7">
     <!-- Greeting -->
     <div class="px-5">
-      <p class="text-sm font-label font-semibold text-primary">{{ greeting }}</p>
+      <p class="text-sm font-mono font-semibold text-primary">{{ greeting }}</p>
       <h1 class="text-2xl font-headline font-extrabold tracking-tight text-on-surface mt-1">
         Para ti
       </h1>
@@ -43,7 +43,7 @@ const hasData = computed(() =>
         Elegida especialmente para ti según tus gustos, favoritos y estilo de vida.
       </p>
 
-      <div class="mt-4 p-4 rounded-2xl gradient-primary-soft">
+      <div class="mt-4 p-4 rounded-sm bg-primary-soft border-brutal shadow-brutal-sm">
         <div class="flex items-start gap-3">
           <span class="material-symbols-outlined text-primary text-[22px] flex-none mt-0.5">auto_awesome</span>
           <div>
@@ -60,37 +60,38 @@ const hasData = computed(() =>
     <div v-if="hasData" class="px-5">
       <div class="flex flex-wrap gap-2">
         <span
-          v-if="userStore.stylePreference"
-          class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full gradient-primary-soft text-primary font-label font-semibold text-xs"
+          v-for="sid in userStore.stylePreference"
+          :key="sid"
+          class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-sm bg-primary-soft text-primary border border-outline font-label font-semibold text-xs"
         >
           <span class="material-symbols-outlined text-[14px]">apparel</span>
-          {{ capitalize(userStore.stylePreference) }}
+          {{ capitalize(sid) }}
         </span>
         <span
           v-for="ctx in userStore.contexts"
           :key="ctx"
-          class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container text-on-surface-variant font-label font-semibold text-xs"
+          class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-sm bg-surface border border-outline text-on-surface-variant font-label font-semibold text-xs"
         >
           {{ capitalize(ctx) }}
         </span>
         <span
           v-for="feat in userStore.shoeFeatures"
           :key="feat"
-          class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-primary/10 text-primary font-label font-semibold text-xs"
+          class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-sm bg-primary-soft text-primary border border-outline font-label font-semibold text-xs"
         >
           <span class="material-symbols-outlined text-[14px]">footprint</span>
           {{ capitalize(feat.replace('-', ' ')) }}
         </span>
         <span
           v-if="catalogStore.favorites.length > 0"
-          class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container text-on-surface-variant font-label font-semibold text-xs"
+          class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-sm bg-surface border border-outline text-on-surface-variant font-label font-semibold text-xs"
         >
           <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1">favorite</span>
           {{ catalogStore.favorites.length }} favoritos
         </span>
         <span
           v-if="wardrobeStore.totalItems > 0"
-          class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container text-on-surface-variant font-label font-semibold text-xs"
+          class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-sm bg-surface border border-outline text-on-surface-variant font-label font-semibold text-xs"
         >
           <span class="material-symbols-outlined text-[14px]">checkroom</span>
           {{ wardrobeStore.totalItems }} prendas
@@ -101,14 +102,14 @@ const hasData = computed(() =>
     <!-- Curated picks -->
     <section class="px-5">
       <div class="flex items-baseline justify-between mb-4">
-        <h2 class="text-lg font-headline font-extrabold tracking-tight text-on-surface">
+        <h2 class="text-lg font-headline font-extrabold tracking-tight text-on-surface underline decoration-primary decoration-4 underline-offset-4">
           Pensado para ti
         </h2>
-        <span class="text-[10px] font-label font-bold tracking-[0.1em] text-primary uppercase">
+        <span class="text-[10px] font-mono font-bold tracking-[0.1em] text-primary uppercase">
           {{ topPicks.length }} selecciones
         </span>
       </div>
-      <div class="grid grid-cols-2 gap-3.5">
+      <div class="grid grid-cols-2 gap-5">
         <ProductCard
           v-for="product in topPicks"
           :key="product.id"
